@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>École de Danse ADK — Une famille, une passion, une histoire, une vie</title>
+  <meta name="description" content="L'École de Danse ADK propose des cours de danse classique, contemporaine, jazz et hip-hop pour tous les âges. Inscrivez vos enfants dès maintenant à Ixelles.">
+  <meta name="keywords" content="école de danse, ADK, danse classique, contemporain, jazz, hip-hop, Ixelles, Belgique">
+  <meta property="og:title" content="École de Danse ADK">
+  <meta property="og:description" content="Une famille - Une passion - Une histoire - Une vie. L'École de Danse ADK vous accueille à Ixelles.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="http://annedkdanse.be/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩰</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo" data-target="#hero">
+      <span class="nav-logo-main">ADK</span>
+      <span class="nav-logo-sub">École de Danse</span>
+    </a>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="#cours" data-target="#cours" data-section="cours">Cours</a></li>
+      <li><a class="nav-link" href="#planning" data-target="#planning" data-section="planning">Planning</a></li>
+      <li><a class="nav-link" href="#actualites" data-target="#actualites" data-section="actualites">Actualités</a></li>
+      <li><a class="nav-link" href="#galerie" data-target="#galerie" data-section="galerie">Galerie</a></li>
+      <li><a class="nav-link" href="#parents" data-target="#parents" data-section="parents">Espace Parents</a></li>
+      <li><a class="nav-link" href="#contact" data-target="#contact" data-section="contact">Contact</a></li>
+      <li><a class="nav-link nav-cta" href="#inscription" data-target="#inscription">S'inscrire</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Menu" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="#cours" data-target="#cours">Cours</a>
+    <a class="nav-link" href="#planning" data-target="#planning">Planning</a>
+    <a class="nav-link" href="#actualites" data-target="#actualites">Actualités</a>
+    <a class="nav-link" href="#galerie" data-target="#galerie">Galerie</a>
+    <a class="nav-link" href="#parents" data-target="#parents">Espace Parents</a>
+    <a class="nav-link" href="#contact" data-target="#contact">Contact</a>
+    <a class="btn btn-primary" href="#inscription" data-target="#inscription">S'inscrire</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">✦ Saison 2026 – 2027 ouverte</div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-main">École de Danse</span>
+        <span class="hero-title-accent">ADK</span>
+      </h1>
+
+      <p class="hero-tagline">Une famille · Une passion · Une histoire · Une vie</p>
+
+      <div class="hero-actions">
+        <a href="#inscription" class="btn btn-primary" data-target="#inscription" id="btn-inscription-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          S'inscrire maintenant
+        </a>
+        <a href="#cours" class="btn btn-outline" data-target="#cours" id="btn-cours-hero">
+          Découvrir nos cours
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value" id="stat-ans">0</div>
+          <div class="hero-stat-label">Ans d'expérience</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" id="stat-eleves">0</div>
+          <div class="hero-stat-label">Élèves</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" id="stat-styles">0</div>
+          <div class="hero-stat-label">Styles de danse</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" id="stat-profs">0</div>
+          <div class="hero-stat-label">Professeurs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" data-target="#cours">
+      <div class="scroll-line"></div>
+      <span>Découvrir</span>
+    </div>
+  </section>
+
+  <!-- ==================== COURS ==================== -->
+  <section id="cours" style="background: var(--dark); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Nos disciplines</span>
+        <h2 class="section-title reveal reveal-delay-1">Nos <em>cours</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">De l'éveil à la danse pour les tout-petits jusqu'aux classes de niveau avancé, ADK accompagne chaque danseur dans son parcours artistique unique.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="courses-filters reveal">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="classique">🩰 Classique</button>
+        <button class="filter-btn" data-filter="contemporain">🌊 Contemporain</button>
+        <button class="filter-btn" data-filter="jazz">🎷 Jazz</button>
+        <button class="filter-btn" data-filter="hiphop">🎤 Hip-Hop</button>
+        <button class="filter-btn" data-filter="eveil">🌸 Éveil</button>
+      </div>
+
+      <div class="courses-grid" id="courses-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== TARIFS ==================== -->
+  <section style="background: var(--black); padding: 5rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Tarification</span>
+        <h2 class="section-title reveal reveal-delay-1">Nos <em>tarifs</em></h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+        <div class="card reveal" style="padding:1.75rem; text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🎓</div>
+          <div style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">1 cours / semaine</div>
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--white);">280€</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">/ an · Cours de 45min – 1h</div>
+          <a href="#inscription" class="btn btn-outline btn-sm" data-target="#inscription">S'inscrire</a>
+        </div>
+        <div class="card reveal reveal-delay-1" style="padding:1.75rem; text-align:center; border-color:var(--border); background:rgba(201,168,76,0.04);">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">⭐</div>
+          <div style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">2 cours / semaine</div>
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--gold);">480€</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">/ an · Réduction famille 15%</div>
+          <a href="#inscription" class="btn btn-primary btn-sm" data-target="#inscription">S'inscrire</a>
+        </div>
+        <div class="card reveal reveal-delay-2" style="padding:1.75rem; text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">💫</div>
+          <div style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Pass Illimité</div>
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--white);">650€</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">/ an · Tous les cours</div>
+          <a href="#inscription" class="btn btn-outline btn-sm" data-target="#inscription">S'inscrire</a>
+        </div>
+        <div class="card reveal reveal-delay-3" style="padding:1.75rem; text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">☀️</div>
+          <div style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Stage d'été</div>
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--white);">220€</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">/ 2 semaines · Juillet / Août</div>
+          <a href="#inscription" class="btn btn-outline btn-sm" data-target="#inscription">S'inscrire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PLANNING ==================== -->
+  <section id="planning" style="background: var(--black); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Organisation</span>
+        <h2 class="section-title reveal reveal-delay-1"><em>Planning</em> hebdomadaire</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Consultez le calendrier de la semaine et trouvez le cours qui vous convient.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="planning-nav reveal">
+        <button class="planning-nav-btn" id="plan-prev" aria-label="Semaine précédente">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="planning-week" id="planning-week">Cette semaine</div>
+        <button class="planning-nav-btn" id="plan-next" aria-label="Semaine suivante">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="planning-grid" id="planning-grid" style="overflow-x:auto;"></div>
+
+      <!-- Legend -->
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;justify-content:center;" class="reveal">
+        <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--text-muted)"><span style="width:12px;height:12px;border-radius:2px;background:var(--rose);display:inline-block;"></span> Classique</span>
+        <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--text-muted)"><span style="width:12px;height:12px;border-radius:2px;background:var(--gold);display:inline-block;"></span> Contemporain</span>
+        <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--text-muted)"><span style="width:12px;height:12px;border-radius:2px;background:#7BB4DC;display:inline-block;"></span> Jazz</span>
+        <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--text-muted)"><span style="width:12px;height:12px;border-radius:2px;background:#90CC90;display:inline-block;"></span> Hip-Hop</span>
+        <span style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--text-muted)"><span style="width:12px;height:12px;border-radius:2px;background:#DC9EC8;display:inline-block;"></span> Éveil</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INSCRIPTION ==================== -->
+  <section id="inscription" style="background: var(--dark); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Rejoindre ADK</span>
+        <h2 class="section-title reveal reveal-delay-1">Inscription <em>en ligne</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">Remplissez ce formulaire et notre équipe vous contactera pour finaliser l'inscription.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="inscription-layout">
+        <!-- Info -->
+        <div class="inscription-info reveal">
+          <h3>Bienvenue à l'École ADK 🩰</h3>
+          <p>Depuis 1998, l'École de Danse ADK accompagne des centaines d'élèves de tous âges dans leur passion pour la danse. Notre approche bienveillante et professionnelle permet à chaque enfant de s'épanouir à son rythme.</p>
+          <div class="inscription-steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>Remplissez le formulaire</h4>
+                <p>Indiquez les informations de votre enfant et le(s) cours souhaité(s).</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>Nous vous contactons</h4>
+                <p>Notre équipe vous rappelle dans les 48h pour confirmer la disponibilité.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>Cours d'essai gratuit</h4>
+                <p>Avant toute inscription définitive, un cours d'essai gratuit vous est offert.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Bienvenue dans la famille ADK !</h4>
+                <p>Finalisation de l'inscription et paiement de la cotisation annuelle.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="reveal reveal-delay-2">
+          <form class="form-card" id="inscription-form">
+            <h3 class="form-title">Formulaire d'inscription</h3>
+
+            <div class="form-section-title" style="border-top:none;padding-top:0;">👧 Informations de l'élève</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="child-firstname">Prénom *</label>
+                <input class="form-input" type="text" id="child-firstname" placeholder="Léa" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="child-lastname">Nom *</label>
+                <input class="form-input" type="text" id="child-lastname" placeholder="Dupont" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="child-birth">Date de naissance *</label>
+                <input class="form-input" type="date" id="child-birth" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="child-level">Niveau actuel</label>
+                <select class="form-select" id="child-level">
+                  <option value="">Sélectionner...</option>
+                  <option>Débutant (première fois)</option>
+                  <option>Quelques cours</option>
+                  <option>1-2 ans d'expérience</option>
+                  <option>3-5 ans d'expérience</option>
+                  <option>5+ ans d'expérience</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section-title">👨‍👩‍👧 Informations du parent / tuteur</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="parent-firstname">Prénom *</label>
+                <input class="form-input" type="text" id="parent-firstname" placeholder="Marie" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="parent-lastname">Nom *</label>
+                <input class="form-input" type="text" id="parent-lastname" placeholder="Dupont" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="parent-email-form">Email *</label>
+                <input class="form-input" type="email" id="parent-email-form" placeholder="marie@email.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="parent-phone">Téléphone *</label>
+                <input class="form-input" type="tel" id="parent-phone" placeholder="+32 4XX XX XX XX" required>
+              </div>
+            </div>
+
+            <div class="form-section-title">💃 Cours souhaité(s)</div>
+            <div class="form-group full">
+              <div class="form-checkbox-group" id="course-checkboxes"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Remarques ou questions</label>
+              <textarea class="form-textarea" id="form-message" placeholder="Informations complémentaires, questions particulières..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Envoyer ma demande d'inscription
+            </button>
+          </form>
+
+          <div id="form-success" class="form-card form-success">
+            <div class="form-success-icon">✅</div>
+            <h3>Demande envoyée !</h3>
+            <p>Merci pour votre inscription. L'équipe ADK vous contactera dans les 48 heures pour confirmer votre place et organiser votre cours d'essai gratuit.</p>
+            <br>
+            <a href="#cours" class="btn btn-outline btn-sm" data-target="#cours">Voir nos cours</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ESPACE PARENTS ==================== -->
+  <section id="parents" style="background: var(--black); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Suivi personnalisé</span>
+        <h2 class="section-title reveal reveal-delay-1">Espace <em>Parents</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">Suivez les progrès de votre enfant, consultez les présences et restez informé des actualités de l'école.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="parents-layout">
+        <!-- Features / Login -->
+        <div>
+          <div id="login-card" class="login-card reveal">
+            <h3 class="login-title">🔐 Connexion</h3>
+            <p class="login-sub">Accédez à votre espace personnel parent</p>
+            <form id="login-form">
+              <div class="form-group">
+                <label class="form-label" for="parent-email">Email</label>
+                <input class="form-input" type="email" id="parent-email" placeholder="votre@email.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="parent-password">Mot de passe</label>
+                <input class="form-input" type="password" id="parent-password" placeholder="••••••••" required>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Se connecter</button>
+            </form>
+            <div class="demo-hint">
+              💡 Démo : <strong>parent@adk.be</strong> / <strong>adk2026</strong>
+            </div>
+          </div>
+
+          <!-- Dashboard -->
+          <div id="dashboard" class="dashboard login-card">
+            <div class="dashboard-header">
+              <div class="dashboard-welcome">Bonjour, <span id="welcome-name">Marie</span> 👋</div>
+              <button class="btn btn-outline btn-sm" id="logout-btn">Déconnexion</button>
+            </div>
+
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;">
+              🩰 Suivi de <span id="child-name-dash" style="color:var(--white);margin-left:0.25rem;">Léa</span>
+            </div>
+
+            <div class="dashboard-cards">
+              <div class="dash-card">
+                <div class="dash-card-label">Cours suivis</div>
+                <div class="dash-card-value" id="child-courses-count">2</div>
+              </div>
+              <div class="dash-card">
+                <div class="dash-card-label">Taux de présence</div>
+                <div class="dash-card-value" id="attendance-rate">80%</div>
+              </div>
+            </div>
+
+            <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">
+              📋 Historique des présences
+            </div>
+            <div class="attendance-list" id="attendance-list"></div>
+          </div>
+        </div>
+
+        <!-- Features list -->
+        <div class="parent-features reveal reveal-delay-1">
+          <div class="parent-feature">
+            <div class="parent-feature-icon">📊</div>
+            <div>
+              <h4>Suivi des présences</h4>
+              <p>Consultez l'historique des présences et absences de votre enfant pour chaque cours.</p>
+            </div>
+          </div>
+          <div class="parent-feature">
+            <div class="parent-feature-icon">📅</div>
+            <div>
+              <h4>Planning personnalisé</h4>
+              <p>Accédez au planning filtré selon les cours de votre enfant. Ne ratez plus aucun cours.</p>
+            </div>
+          </div>
+          <div class="parent-feature">
+            <div class="parent-feature-icon">🔔</div>
+            <div>
+              <h4>Notifications</h4>
+              <p>Recevez des alertes pour les cours annulés, événements spéciaux et messages de l'école.</p>
+            </div>
+          </div>
+          <div class="parent-feature">
+            <div class="parent-feature-icon">💳</div>
+            <div>
+              <h4>Paiements en ligne</h4>
+              <p>Gérez vos cotisations et paiements directement depuis votre espace personnel.</p>
+            </div>
+          </div>
+          <div class="parent-feature">
+            <div class="parent-feature-icon">📸</div>
+            <div>
+              <h4>Photos privées</h4>
+              <p>Accédez aux photos de cours et spectacles réservées aux familles ADK.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACTUALITES ==================== -->
+  <section id="actualites" style="background: var(--dark); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Vie de l'école</span>
+        <h2 class="section-title reveal reveal-delay-1"><em>Actualités</em> & Événements</h2>
+        <div class="divider"></div>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown-banner reveal">
+        <div class="countdown-event">🎭 Prochain événement</div>
+        <div class="countdown-title" id="event-name">Gala de Fin d'Année</div>
+        <div class="countdown-digits" id="countdown">
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-days">00</span>
+            <span class="countdown-label">Jours</span>
+          </div>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-hours">00</span>
+            <span class="countdown-label">Heures</span>
+          </div>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-mins">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-secs">00</span>
+            <span class="countdown-label">Secondes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-grid" id="news-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== GALERIE ==================== -->
+  <section id="galerie" style="background: var(--black); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Nos moments</span>
+        <h2 class="section-title reveal reveal-delay-1">Galerie <em>Photos</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">Spectacles, cours, répétitions... revivez les plus beaux moments de l'École ADK.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" style="background: var(--dark); padding: 7rem 0;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Nous trouver</span>
+        <h2 class="section-title reveal reveal-delay-1">Contact & <em>Informations</em></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Info -->
+        <div class="reveal">
+          <h3>École de Danse ADK</h3>
+          <p>N'hésitez pas à nous contacter pour toute question concernant nos cours, les inscriptions ou pour organiser une visite de l'école.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">Adresse</div>
+                <div class="contact-item-value">Rue de la Danse 42, 1050 Ixelles<br>Belgique</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">Téléphone</div>
+                <div class="contact-item-value"><a href="tel:+3223456789" style="color:inherit">+32 2 345 67 89</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value"><a href="mailto:contact@annedkdanse.be" style="color:inherit">contact@annedkdanse.be</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">🕐</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">Accueil administratif</div>
+                <div class="contact-item-value">Lun–Ven 14h–19h · Sam 9h–13h</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://facebook.com/annedkdanse" target="_blank" class="social-link" title="Facebook" aria-label="Facebook ADK">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com/annedkdanse" target="_blank" class="social-link" title="Instagram" aria-label="Instagram ADK">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="mailto:contact@annedkdanse.be" class="social-link" title="Email" aria-label="Email ADK">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.8!2d4.3638!3d50.8264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ5JzM1LjAiTiA0wrAyMSc1MC4wIkU!5e0!3m2!1sfr!2sbe!4v1234567890"
+              allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localisation École de Danse ADK">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal reveal-delay-1">
+          <form class="form-card" id="contact-form">
+            <h3 class="form-title">Nous écrire ✉️</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nom *</label>
+                <input class="form-input" type="text" id="contact-name" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email *</label>
+                <input class="form-input" type="email" id="contact-email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Sujet</label>
+              <select class="form-select" id="contact-subject">
+                <option>Question sur les cours</option>
+                <option>Inscription</option>
+                <option>Tarifs</option>
+                <option>Stage</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message *</label>
+              <textarea class="form-textarea" id="contact-message" placeholder="Votre message..." style="min-height:150px;" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="contact-submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand-name">ADK</div>
+        <div class="footer-brand-tagline">Une famille · Une passion · Une histoire · Une vie</div>
+        <p class="footer-brand-desc">Depuis 1998, l'École de Danse ADK accompagne avec passion chaque élève dans son aventure artistique. Classique, contemporain, jazz, hip-hop — la danse pour tous.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#cours" data-target="#cours">Nos cours</a></li>
+          <li><a href="#planning" data-target="#planning">Planning</a></li>
+          <li><a href="#inscription" data-target="#inscription">Inscription</a></li>
+          <li><a href="#parents" data-target="#parents">Espace Parents</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cours</h4>
+        <ul>
+          <li><a href="#cours">🩰 Danse Classique</a></li>
+          <li><a href="#cours">🌊 Contemporain</a></li>
+          <li><a href="#cours">🎷 Jazz</a></li>
+          <li><a href="#cours">🎤 Hip-Hop</a></li>
+          <li><a href="#cours">🌸 Éveil</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+3223456789">📞 +32 2 345 67 89</a></li>
+          <li><a href="mailto:contact@annedkdanse.be">✉️ contact@annedkdanse.be</a></li>
+          <li><a href="http://annedkdanse.be">🌐 annedkdanse.be</a></li>
+          <li><a href="https://facebook.com/annedkdanse" target="_blank">📘 Facebook</a></li>
+          <li><a href="https://instagram.com/annedkdanse" target="_blank">📸 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footer-year">2026</span> École de Danse ADK · Tous droits réservés</p>
+      <p style="font-style:italic;color:var(--gold);font-size:0.75rem;">Fait avec ❤️ pour les danseurs de demain</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Agrandissement photo">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">✕</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
