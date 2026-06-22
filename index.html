@@ -26,7 +26,7 @@
       <li><a class="nav-link" href="#planning" data-target="#planning" data-section="planning">Planning</a></li>
       <li><a class="nav-link" href="#actualites" data-target="#actualites" data-section="actualites">Actualités</a></li>
       <li><a class="nav-link" href="#galerie" data-target="#galerie" data-section="galerie">Galerie</a></li>
-      <li><a class="nav-link" href="#parents" data-target="#parents" data-section="parents">Espace Parents</a></li>
+      <li><a class="nav-link" href="#parents" data-target="#parents" data-section="parents">Mon Espace</a></li>
       <li><a class="nav-link" href="#contact" data-target="#contact" data-section="contact">Contact</a></li>
       <li><a class="nav-link nav-cta" href="#inscription" data-target="#inscription">S'inscrire</a></li>
     </ul>
@@ -326,106 +326,241 @@
     </div>
   </section>
 
-  <!-- ==================== ESPACE PARENTS ==================== -->
+  <!-- ==================== ESPACE ADK — PORTAIL ==================== -->
   <section id="parents" style="background: var(--black); padding: 7rem 0;">
     <div class="section" style="padding-top: 0; padding-bottom: 0;">
       <div class="section-header">
-        <span class="section-eyebrow reveal">Suivi personnalisé</span>
-        <h2 class="section-title reveal reveal-delay-1">Espace <em>Parents</em></h2>
-        <p class="section-subtitle reveal reveal-delay-2">Suivez les progrès de votre enfant, consultez les présences et restez informé des actualités de l'école.</p>
+        <span class="section-eyebrow reveal">Accès sécurisé</span>
+        <h2 class="section-title reveal reveal-delay-1">Mon <em>Espace ADK</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">Connectez-vous avec votre compte pour accéder à votre espace personnalisé selon votre profil.</p>
         <div class="divider"></div>
       </div>
 
-      <div class="parents-layout">
-        <!-- Features / Login -->
-        <div>
-          <div id="login-card" class="login-card reveal">
-            <h3 class="login-title">🔐 Connexion</h3>
-            <p class="login-sub">Accédez à votre espace personnel parent</p>
-            <form id="login-form">
-              <div class="form-group">
-                <label class="form-label" for="parent-email">Email</label>
-                <input class="form-input" type="email" id="parent-email" placeholder="votre@email.com" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="parent-password">Mot de passe</label>
-                <input class="form-input" type="password" id="parent-password" placeholder="••••••••" required>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Se connecter</button>
-            </form>
-            <div class="demo-hint">
-              💡 Démo : <strong>parent@adk.be</strong> / <strong>adk2026</strong>
+      <!-- PORTAIL DE CONNEXION -->
+      <div class="portal-wrapper" id="portal-login-wrapper">
+        <div class="portal-login-card reveal">
+          <div class="portal-logo">ADK</div>
+          <h3 class="portal-title">Connexion</h3>
+          <p class="portal-subtitle">Accédez à votre espace personnel</p>
+
+          <!-- Sélecteur de rôle (aide visuelle) -->
+          <div class="portal-roles">
+            <div class="portal-role-hint" data-role="admin" id="hint-admin">
+              <div class="role-icon">👑</div>
+              <div class="role-label">Admin</div>
+            </div>
+            <div class="portal-role-hint" data-role="prof" id="hint-prof">
+              <div class="role-icon">👩‍🏫</div>
+              <div class="role-label">Professeur</div>
+            </div>
+            <div class="portal-role-hint" data-role="parent" id="hint-parent">
+              <div class="role-icon">👨‍👩‍👧</div>
+              <div class="role-label">Parent</div>
             </div>
           </div>
 
-          <!-- Dashboard -->
-          <div id="dashboard" class="dashboard login-card">
-            <div class="dashboard-header">
-              <div class="dashboard-welcome">Bonjour, <span id="welcome-name">Marie</span> 👋</div>
-              <button class="btn btn-outline btn-sm" id="logout-btn">Déconnexion</button>
+          <form id="portal-login-form">
+            <div class="form-group">
+              <label class="form-label" for="portal-email">Email</label>
+              <input class="form-input" type="email" id="portal-email" placeholder="votre@email.com" required autocomplete="email">
             </div>
+            <div class="form-group">
+              <label class="form-label" for="portal-password">Mot de passe</label>
+              <input class="form-input" type="password" id="portal-password" placeholder="••••••••" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="portal-submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+              Se connecter
+            </button>
+          </form>
 
-            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;">
-              🩰 Suivi de <span id="child-name-dash" style="color:var(--white);margin-left:0.25rem;">Léa</span>
-            </div>
-
-            <div class="dashboard-cards">
-              <div class="dash-card">
-                <div class="dash-card-label">Cours suivis</div>
-                <div class="dash-card-value" id="child-courses-count">2</div>
-              </div>
-              <div class="dash-card">
-                <div class="dash-card-label">Taux de présence</div>
-                <div class="dash-card-value" id="attendance-rate">80%</div>
-              </div>
-            </div>
-
-            <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">
-              📋 Historique des présences
-            </div>
-            <div class="attendance-list" id="attendance-list"></div>
-          </div>
+          <div class="demo-creds" id="demo-creds"></div>
         </div>
 
-        <!-- Features list -->
-        <div class="parent-features reveal reveal-delay-1">
-          <div class="parent-feature">
-            <div class="parent-feature-icon">📊</div>
+        <!-- Info cards côté droit -->
+        <div class="portal-info-side reveal reveal-delay-1">
+          <div class="portal-info-card">
+            <div class="portal-info-icon icon-admin">👑</div>
             <div>
-              <h4>Suivi des présences</h4>
-              <p>Consultez l'historique des présences et absences de votre enfant pour chaque cours.</p>
+              <h4>Administrateur <span class="role-badge badge-admin">Admin</span></h4>
+              <p>Gestion globale : élèves, professeurs, inscriptions, cours, comptabilité et actualités de l'école.</p>
             </div>
           </div>
-          <div class="parent-feature">
-            <div class="parent-feature-icon">📅</div>
+          <div class="portal-info-card">
+            <div class="portal-info-icon icon-prof">👩‍🏫</div>
             <div>
-              <h4>Planning personnalisé</h4>
-              <p>Accédez au planning filtré selon les cours de votre enfant. Ne ratez plus aucun cours.</p>
+              <h4>Professeur <span class="role-badge badge-prof">Prof</span></h4>
+              <p>Accès à vos cours, liste d'élèves, feuille d'appel et suivi des présences par séance.</p>
             </div>
           </div>
-          <div class="parent-feature">
-            <div class="parent-feature-icon">🔔</div>
+          <div class="portal-info-card">
+            <div class="portal-info-icon icon-parent">👨‍👩‍👧</div>
             <div>
-              <h4>Notifications</h4>
-              <p>Recevez des alertes pour les cours annulés, événements spéciaux et messages de l'école.</p>
-            </div>
-          </div>
-          <div class="parent-feature">
-            <div class="parent-feature-icon">💳</div>
-            <div>
-              <h4>Paiements en ligne</h4>
-              <p>Gérez vos cotisations et paiements directement depuis votre espace personnel.</p>
-            </div>
-          </div>
-          <div class="parent-feature">
-            <div class="parent-feature-icon">📸</div>
-            <div>
-              <h4>Photos privées</h4>
-              <p>Accédez aux photos de cours et spectacles réservées aux familles ADK.</p>
+              <h4>Parent <span class="role-badge badge-parent">Parent</span></h4>
+              <p>Suivi des présences de vos enfants, planning personnalisé, paiements et messages de l'école.</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- ===== DASHBOARD ADMIN ===== -->
+      <div class="dashboard-panel" id="panel-admin">
+        <div class="dash-header">
+          <div class="dash-header-left">
+            <div class="dash-avatar" id="admin-avatar">👑</div>
+            <div>
+              <div class="dash-user-name" id="admin-name">Anne Dubois</div>
+              <div class="dash-user-role"><span class="role-badge badge-admin">👑 Administratrice</span></div>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" id="admin-logout">Déconnexion</button>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-card-label">Élèves inscrits</div>
+            <div class="stat-card-value" id="admin-stat-eleves">8</div>
+            <div class="stat-card-sub">Saison 2025-2026</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Inscriptions en attente</div>
+            <div class="stat-card-value" id="admin-stat-pending" style="color:#DC9EC8">3</div>
+            <div class="stat-card-sub">À traiter</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Cours actifs</div>
+            <div class="stat-card-value">6</div>
+            <div class="stat-card-sub">5 disciplines</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Cotisations reçues</div>
+            <div class="stat-card-value" style="color:#90CC90">3 040€</div>
+            <div class="stat-card-sub">2 en attente</div>
+          </div>
+        </div>
+
+        <div class="dash-tabs" id="admin-tabs">
+          <button class="dash-tab active" data-tab="inscriptions">📝 Inscriptions <span class="tab-badge" id="pending-badge">3</span></button>
+          <button class="dash-tab" data-tab="eleves">🩰 Élèves</button>
+          <button class="dash-tab" data-tab="profs">👩‍🏫 Professeurs</button>
+        </div>
+
+        <!-- Tab: Inscriptions -->
+        <div class="tab-content active" id="tab-inscriptions">
+          <div class="inscription-list" id="admin-inscription-list"></div>
+        </div>
+
+        <!-- Tab: Élèves -->
+        <div class="tab-content" id="tab-eleves">
+          <div class="data-table-wrapper">
+            <div class="data-table-header">
+              <span class="data-table-title">📋 Liste des élèves</span>
+            </div>
+            <table class="data-table" id="admin-eleves-table">
+              <thead><tr><th>Élève</th><th>Âge</th><th>Cours</th><th>Cotisation</th></tr></thead>
+              <tbody id="admin-eleves-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab: Professeurs -->
+        <div class="tab-content" id="tab-profs">
+          <div class="data-table-wrapper">
+            <div class="data-table-header">
+              <span class="data-table-title">👩‍🏫 Équipe pédagogique</span>
+            </div>
+            <table class="data-table" id="admin-profs-table">
+              <thead><tr><th>Professeur</th><th>Titre</th><th>Cours enseignés</th><th>Élèves</th></tr></thead>
+              <tbody id="admin-profs-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== DASHBOARD PROF ===== -->
+      <div class="dashboard-panel" id="panel-prof">
+        <div class="dash-header">
+          <div class="dash-header-left">
+            <div class="dash-avatar" id="prof-avatar">👩‍🏫</div>
+            <div>
+              <div class="dash-user-name" id="prof-name">Sophie Martin</div>
+              <div class="dash-user-role"><span class="role-badge badge-prof">👩‍🏫 Professeure</span></div>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" id="prof-logout">Déconnexion</button>
+        </div>
+
+        <div class="dash-tabs" id="prof-tabs">
+          <button class="dash-tab active" data-tab="appel">📋 Feuille d'appel</button>
+          <button class="dash-tab" data-tab="mes-eleves">🩰 Mes élèves</button>
+        </div>
+
+        <!-- Tab: Appel -->
+        <div class="tab-content active" id="tab-appel">
+          <div class="appel-course-selector" id="appel-courses"></div>
+          <div class="appel-date-row">
+            <span class="appel-date-label">Date du cours :</span>
+            <input class="form-input" type="date" id="appel-date" style="width:auto;padding:0.5rem 0.75rem;">
+          </div>
+          <div class="appel-list" id="appel-list"></div>
+          <div class="appel-save-row">
+            <button class="btn btn-primary btn-sm" id="appel-save-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
+              Sauvegarder l'appel
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab: Mes élèves -->
+        <div class="tab-content" id="tab-mes-eleves">
+          <div class="data-table-wrapper">
+            <div class="data-table-header">
+              <span class="data-table-title" id="prof-eleves-title">Mes élèves</span>
+            </div>
+            <table class="data-table">
+              <thead><tr><th>Élève</th><th>Âge</th><th>Cours</th><th>Présence</th></tr></thead>
+              <tbody id="prof-eleves-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== DASHBOARD PARENT ===== -->
+      <div class="dashboard-panel" id="panel-parent">
+        <div class="dash-header">
+          <div class="dash-header-left">
+            <div class="dash-avatar" id="parent-avatar">👩</div>
+            <div>
+              <div class="dash-user-name" id="parent-name">Marie Dupont</div>
+              <div class="dash-user-role"><span class="role-badge badge-parent">👨‍👩‍👧 Parent</span></div>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" id="parent-logout">Déconnexion</button>
+        </div>
+
+        <div class="child-tabs" id="child-tabs"></div>
+
+        <div class="parent-stats">
+          <div class="stat-card">
+            <div class="stat-card-label">Cours inscrits</div>
+            <div class="stat-card-value" id="parent-stat-cours">2</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Présences</div>
+            <div class="stat-card-value" id="parent-stat-presence" style="color:#90CC90">4</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Absences</div>
+            <div class="stat-card-value" id="parent-stat-absence" style="color:#DC6464">1</div>
+          </div>
+        </div>
+
+        <div class="parent-attendance-section">
+          <div class="parent-attendance-header">📋 Historique des présences — <span id="parent-child-name">Léa</span></div>
+          <div class="parent-attendance-list" id="parent-attendance-list"></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -636,6 +771,7 @@
   </div>
 
   <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
