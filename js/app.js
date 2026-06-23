@@ -126,50 +126,162 @@ function createCourseCard(course) {
 }
 
 // =============================================
-// PLANNING
+// PLANNING avec filtres + vue mobile
 // =============================================
+const planningState = { offset: 0, styleFilter: 'all', lieuFilter: 'all', mobileDay: 0 };
+
 function initPlanning() {
-  const grid = document.getElementById('planning-grid');
-  const weekLabel = document.getElementById('planning-week');
-  let offset = 0;
-  document.getElementById('plan-prev').addEventListener('click', () => { offset--; renderPlanning(grid, weekLabel, offset); });
-  document.getElementById('plan-next').addEventListener('click', () => { offset++; renderPlanning(grid, weekLabel, offset); });
-  renderPlanning(grid, weekLabel, offset);
+  const grid     = document.getElementById('planning-grid');
+  const weekLabel= document.getElementById('planning-week');
+
+  // Navigation semaine
+  document.getElementById('plan-prev').addEventListener('click', () => { planningState.offset--; refreshPlanning(grid, weekLabel); });
+  document.getElementById('plan-next').addEventListener('click', () => { planningState.offset++; refreshPlanning(grid, weekLabel); });
+
+  // Filtres style
+  document.getElementById('planning-style-filters').addEventListener('click', e => {
+    const btn = e.target.closest('.plan-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('#planning-style-filters .plan-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    planningState.styleFilter = btn.dataset.style;
+    refreshPlanning(grid, weekLabel);
+    renderMobileDayCourses();
+  });
+
+  // Filtres lieu
+  document.getElementById('planning-lieu-filters').addEventListener('click', e => {
+    const btn = e.target.closest('.plan-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('#planning-lieu-filters .plan-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    planningState.lieuFilter = btn.dataset.lieu;
+    refreshPlanning(grid, weekLabel);
+    renderMobileDayCourses();
+  });
+
+  // Onglets jours mobile
+  document.getElementById('mobile-day-tabs').addEventListener('click', e => {
+    const tab = e.target.closest('.mobile-day-tab');
+    if (!tab) return;
+    document.querySelectorAll('.mobile-day-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    planningState.mobileDay = parseInt(tab.dataset.day);
+    renderMobileDayCourses();
+  });
+
+  refreshPlanning(grid, weekLabel);
+  renderMobileDayCourses();
 }
-function renderPlanning(grid, weekLabel, offset) {
+
+function slotMatchesFilters(slot) {
+  const styleOk = planningState.styleFilter === 'all' || slot.style === planningState.styleFilter;
+  const lieuVal = planningState.lieuFilter;
+  const slotLieu = (slot.lieu || '').toLowerCase();
+  const lieuOk = lieuVal === 'all' ||
+    (lieuVal === 'ADK'     && (slotLieu === 'adk'  || slotLieu === '')) ||
+    (lieuVal === 'Rox'     && slotLieu === 'rox') ||
+    (lieuVal === 'Bertrix' && slotLieu === 'bertrix') ||
+    (lieuVal === 'Izel'    && slotLieu === 'izel') ||
+    (lieuVal === 'Flore'   && slotLieu === 'flore');
+  return styleOk && lieuOk;
+}
+
+function refreshPlanning(grid, weekLabel) {
   grid.innerHTML = '';
   const today = new Date();
   const monday = new Date(today);
-  monday.setDate(today.getDate() - today.getDay() + 1 + offset * 7);
+  monday.setDate(today.getDate() - today.getDay() + 1 + planningState.offset * 7);
   const days = DATA.schedule.days;
   const dates = days.map((_, i) => { const d = new Date(monday); d.setDate(monday.getDate() + i); return d; });
   const last = dates[5];
   weekLabel.textContent = `${monday.getDate()} – ${last.getDate()} ${last.toLocaleDateString('fr-BE', { month: 'long', year: 'numeric' })}`;
+
+  // Cellule vide coin haut-gauche
   grid.appendChild(Object.assign(document.createElement('div'), { className: '' }));
+
+  // En-têtes jours
   days.forEach((day, i) => {
     const cell = document.createElement('div');
     cell.className = 'planning-header-cell';
     const isToday = dates[i].toDateString() === today.toDateString();
-    cell.style.borderBottom = isToday ? '2px solid var(--gold)' : '';
+    if (isToday) cell.style.borderBottom = '2px solid var(--gold)';
     cell.innerHTML = `<div class="day">${day}</div><div class="date" style="color:${isToday ? 'var(--gold)' : ''}">${dates[i].getDate()}</div>`;
     grid.appendChild(cell);
   });
+
+  // Lignes horaires
   ["09h00","10h00","11h00","12h00","13h00","14h00","15h00","16h00","17h00","18h00","19h00","20h00"].forEach(hour => {
+    // Vérifier si cette heure a au moins un cours dans le filtre actif
+    const hasMatch = DATA.schedule.slots.some(s => s.hour === hour && slotMatchesFilters(s));
+    if (!hasMatch && planningState.styleFilter !== 'all') return; // Skip empty rows when filtered
+
     const tc = document.createElement('div');
     tc.className = 'planning-time-cell';
     tc.textContent = hour;
     grid.appendChild(tc);
+
     days.forEach((_, di) => {
       const slot = document.createElement('div');
       const match = DATA.schedule.slots.find(s => s.day === di && s.hour === hour);
       if (match) {
-        slot.className = `planning-course-block block-${match.style}`;
-        slot.innerHTML = `<div class="block-name">${match.course}</div><div class="block-time">${match.hour}</div>${match.lieu && match.lieu !== 'ADK' ? `<span class="block-lieu">${match.lieu}</span>` : ''}`;
-      } else { slot.className = 'planning-slot'; }
+        const matches = slotMatchesFilters(match);
+        slot.className = `planning-course-block block-${match.style}${matches ? '' : ' dimmed'}`;
+        const lieuBadge = match.lieu && match.lieu !== 'ADK' ? `<span class="block-lieu">${match.lieu}</span>` : '';
+        slot.innerHTML = `<div class="block-name">${match.course}</div><div class="block-time">${match.hour}</div>${lieuBadge}`;
+      } else {
+        slot.className = 'planning-slot';
+      }
+      slot.style.height = '68px';
       grid.appendChild(slot);
     });
   });
 }
+
+// ---- VUE MOBILE : liste des cours du jour ----
+function renderMobileDayCourses() {
+  const list = document.getElementById('mobile-course-list');
+  if (!list) return;
+  const day = planningState.mobileDay;
+  const slots = DATA.schedule.slots
+    .filter(s => s.day === day && slotMatchesFilters(s))
+    .sort((a, b) => a.hour.localeCompare(b.hour));
+
+  if (slots.length === 0) {
+    list.innerHTML = `<div class="mobile-empty-day"><div class="mobile-empty-day-icon">🩰</div><p>Aucun cours avec ces filtres ce jour-là.</p></div>`;
+    return;
+  }
+
+  const accentColors = {
+    classique: 'var(--rose)', contemporain: 'var(--gold)', jazz: '#7BB4DC',
+    hiphop: '#90CC90', eveil: '#DC9EC8', ragga: '#40C4A4',
+    compagnie: '#B478DC', special: '#DC8C50',
+  };
+
+  list.innerHTML = slots.map(slot => {
+    const course = DATA.getCourseById(slot.courseId);
+    const color = accentColors[slot.style] || 'var(--gold)';
+    const lieuName = slot.lieu && slot.lieu !== 'ADK' ? `📍 ${slot.lieu}` : '🏠 Studio ADK';
+    const ages = course?.ages || '';
+    const prof = course?.prof || '';
+    const biweekly = course?.biweekly ? ' · 1 sem/2' : '';
+    const schedule = course?.schedule || slot.hour;
+    return `
+    <div class="mobile-course-card">
+      <div class="mobile-course-accent" style="background:${color}"></div>
+      <div class="mobile-course-body">
+        <div class="mobile-course-time">${schedule}${biweekly}</div>
+        <div class="mobile-course-name">${slot.course}</div>
+        <div class="mobile-course-meta">
+          <span class="mobile-course-meta-item">👩‍🏫 ${prof}</span>
+          <span class="mobile-course-meta-item">👥 ${ages}</span>
+          <span class="mobile-course-meta-item">${lieuName}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
 
 // =============================================
 // INSCRIPTION
