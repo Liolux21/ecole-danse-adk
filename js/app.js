@@ -289,13 +289,103 @@ function renderMobileDayCourses() {
 function initInscription() {
   const form = document.getElementById('inscription-form');
   const success = document.getElementById('form-success');
-  const checks = document.getElementById('course-checkboxes');
-  DATA.courses.forEach(c => {
-    const lbl = document.createElement('label');
-    lbl.className = 'form-checkbox';
-    lbl.innerHTML = `<input type="checkbox" name="cours" value="${c.name}"> ${c.emoji} ${c.name}`;
-    checks.appendChild(lbl);
+  const courseSelectContainer = document.querySelector('.custom-select-container');
+  const courseSelectHeader = document.getElementById('course-select-header');
+  const courseSelectTags = document.getElementById('course-select-tags');
+  const courseSearchInput = document.getElementById('course-search-input');
+  const courseOptionsList = document.getElementById('course-options-list');
+
+  let selectedCourses = new Set();
+
+  function renderOptions(filterText = '') {
+    courseOptionsList.innerHTML = '';
+    const term = filterText.toLowerCase();
+    const filtered = DATA.courses.filter(c => 
+      c.name.toLowerCase().includes(term) || 
+      (c.prof && c.prof.toLowerCase().includes(term)) ||
+      c.style.toLowerCase().includes(term)
+    );
+
+    if (filtered.length === 0) {
+      courseOptionsList.innerHTML = '<div style="padding:1rem;text-align:center;color:var(--text-muted);font-size:0.8rem;">Aucun cours trouvé.</div>';
+      return;
+    }
+
+    filtered.forEach(c => {
+      const opt = document.createElement('div');
+      opt.className = `custom-select-option ${selectedCourses.has(c.id) ? 'selected' : ''}`;
+      
+      let lieuStr = c.lieu;
+      if (c.lieu === 'adk') lieuStr = 'Studio ADK';
+      else if (c.lieu === 'rox') lieuStr = 'Au Rox';
+      else if (c.lieu === 'bertrix') lieuStr = 'Bertrix';
+      else if (c.lieu === 'izel') lieuStr = 'C.C. Izel';
+      else if (c.lieu === 'flore') lieuStr = 'Florenville';
+
+      const schedule = c.schedule ? c.schedule.split('·')[0].trim() : '';
+      const profStr = c.prof ? `👩‍🏫 ${c.prof}` : '';
+      
+      opt.innerHTML = `
+        <input type="checkbox" ${selectedCourses.has(c.id) ? 'checked' : ''}>
+        <div>
+          <div style="font-weight:600">${c.emoji} ${c.name}</div>
+          <span class="option-meta">${schedule} ${profStr ? '— ' + profStr : ''} — 📍 ${lieuStr}</span>
+        </div>
+      `;
+      opt.addEventListener('click', (e) => {
+        if(e.target.tagName !== 'INPUT') {
+          if (selectedCourses.has(c.id)) selectedCourses.delete(c.id);
+          else selectedCourses.add(c.id);
+          renderTags();
+          renderOptions(courseSearchInput.value);
+        }
+      });
+      courseOptionsList.appendChild(opt);
+    });
+  }
+
+  function renderTags() {
+    if (selectedCourses.size === 0) {
+      courseSelectTags.innerHTML = '<span class="placeholder">Sélectionnez vos cours...</span>';
+    } else {
+      courseSelectTags.innerHTML = '';
+      selectedCourses.forEach(id => {
+        const c = DATA.getCourseById(id);
+        if(!c) return;
+        const pill = document.createElement('div');
+        pill.className = 'course-tag-pill';
+        pill.innerHTML = `<span>${c.emoji} ${c.name}</span> <span class="remove" data-id="${id}">×</span>`;
+        courseSelectTags.appendChild(pill);
+      });
+    }
+  }
+
+  courseSelectHeader.addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove')) {
+      const id = parseInt(e.target.dataset.id);
+      selectedCourses.delete(id);
+      renderTags();
+      renderOptions(courseSearchInput.value);
+      return;
+    }
+    courseSelectContainer.classList.toggle('open');
+    if (courseSelectContainer.classList.contains('open')) {
+      courseSearchInput.focus();
+    }
   });
+
+  courseSearchInput.addEventListener('input', (e) => {
+    renderOptions(e.target.value);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!courseSelectContainer.contains(e.target)) {
+      courseSelectContainer.classList.remove('open');
+    }
+  });
+
+  renderOptions();
+  renderTags();
   form.addEventListener('submit', e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');

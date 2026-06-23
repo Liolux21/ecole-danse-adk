@@ -352,7 +352,22 @@
 
             <div class="form-section-title">💃 Cours souhaité(s)</div>
             <div class="form-group full">
-              <div class="form-checkbox-group" id="course-checkboxes"></div>
+              <div class="custom-select-container">
+                <div class="custom-select-header" id="course-select-header">
+                  <div class="custom-select-tags" id="course-select-tags">
+                    <span class="placeholder">Sélectionnez vos cours...</span>
+                  </div>
+                  <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="custom-select-dropdown" id="course-select-dropdown">
+                  <div class="custom-select-search">
+                    <input type="text" id="course-search-input" placeholder="Rechercher un cours... (ex: Hip-Hop, Janis)">
+                  </div>
+                  <div class="custom-select-list" id="course-options-list">
+                    <!-- Options dynamically inserted here -->
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="form-group">
