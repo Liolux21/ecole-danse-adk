@@ -49,7 +49,7 @@ const VITRINE_DATA = {
   "professeurs": {
     "Anne": {
       "title": "Anne",
-      "category": "Direction & Fondatrice",
+      "category": "Fondatrice & Directrice",
       "avatar": "https://www.annedkdanse.be/gallery_gen/fac195ac9cdce28b1f4016e3c10f388b_1063x1063_0x0_1063x1080_crop.jpg?ts=1784820812",
       "content": "Anne a créé l'école de danse en 1997. Diplômée du Conservatoire de Charleroi en danse classique et jazz, en passant par un perfectionnement au ballet d'Anvers et de Marseille, Anne passionnée par le contact humain et la pédagogie aura cette année près de 30 années d'expérience dans la région ! Elle gère au quotidien l'école ADK pour toutes les décisions et projets, les mises en scène, les assemblages de musiques, les différents shows et concours internationaux avec son équipe de confiance."
     },
