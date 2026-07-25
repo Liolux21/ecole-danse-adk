@@ -743,6 +743,30 @@
         for (const cat of order) {
           if (!groups[cat] || groups[cat].length === 0) continue;
           html += `<div style="text-align: center;"><h3 style="color: #9C5858; margin: 3rem 0 2rem 0; font-family: var(--font-display); font-size: 1.5rem; display: inline-block; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);">${cat}</h3></div>`;
+          
+          if (cat === "Direction & Fondatrice") {
+            for (const p of groups[cat]) {
+              const photoUrl = p.avatar || "https://www.annedkdanse.be/gallery_gen/fac195ac9cdce28b1f4016e3c10f388b_1063x1063_0x0_1063x1080_crop.jpg?ts=1784820812";
+              html += `
+                <div class="card-vitrine" style="cursor: default; padding: 2.5rem 2rem; background: var(--dark-2); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-card); max-width: 950px; margin: 0 auto 1.5rem auto; text-align: left;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: center;">
+                    <div style="flex: 0 0 auto; text-align: center;">
+                      <img src="${photoUrl}" alt="${p.title}" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                      <h4 style="color: #ffffff; font-family: var(--font-display); font-size: 1.4rem; margin-top: 1rem; margin-bottom: 0.2rem; font-weight: 700;">${p.title}</h4>
+                      <div style="font-size: 0.8rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Fondatrice &amp; Direction</div>
+                    </div>
+                    <div style="flex: 1 1 320px;">
+                      <p style="color: var(--text-light); line-height: 1.8; font-size: 0.95rem; text-align: justify; margin: 0;">
+                        ${p.content}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }
+            continue;
+          }
+
           html += `<div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">`;
           for (const p of groups[cat]) {
             const avatarHtml = p.avatar 
