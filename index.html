@@ -685,24 +685,24 @@
             : `<div class="course-img-placeholder" style="background:var(--dark-3);display:flex;align-items:center;justify-content:center;">${c.title}</div>`;
 
           coursHtml += `
-            <div class="course-card" onclick="openDynamic('cours', '${key}')" style="background: #EAD5D5; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; display: block; height: 100%; transition: transform 0.35s;">
+            <div class="course-card" onclick="openDynamic('cours', '${key}')" style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; display: block; height: 100%; transition: transform 0.35s; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
               ${avatarHtml}
-              <div class="course-body">
+              <div class="course-body" style="background: #ffffff;">
                 <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.75rem;">
                   <span class="course-tag tag-${key}">${c.title}</span>
                 </div>
-                <h3 class="course-name" style="color: #B68989; font-size: 1.3rem;">Pôle ${c.title}</h3>
-                <p class="course-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1.5rem;">${c.content.replace(/\n/g, ' ')}</p>
-                <div class="course-meta">
-                  <span class="course-meta-item">
+                <h3 class="course-name" style="color: #7A3535; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">Pôle ${c.title}</h3>
+                <p class="course-desc" style="color: #4A2E2E; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1.5rem; line-height: 1.6;">${c.content.replace(/\n/g, ' ')}</p>
+                <div class="course-meta" style="color: #6A4E4E; font-weight: 600;">
+                  <span class="course-meta-item" style="color: #6A4E4E;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                     ${nbCours > 0 ? nbCours + ' cours' : 'À venir'}
                   </span>
-                  <span class="course-meta-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  <span class="course-meta-item" style="color: #6A4E4E;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     ${nbProfs > 0 ? nbProfs + ' prof(s)' : 'En attente'}
                   </span>
-                  <span class="course-meta-item" style="color:var(--gold)">
+                  <span class="course-meta-item" style="color: #9C5858;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     ${lieux || 'À définir'}
                   </span>
