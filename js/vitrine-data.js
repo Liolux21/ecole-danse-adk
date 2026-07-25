@@ -50,98 +50,150 @@ const VITRINE_DATA = {
     "Anne": {
       "title": "Anne",
       "category": "Fondatrice & Directrice",
-      "avatar": "https://www.annedkdanse.be/gallery_gen/fac195ac9cdce28b1f4016e3c10f388b_1063x1063_0x0_1063x1080_crop.jpg?ts=1784820812",
+      "avatar": "https://annedkdanse.be/gallery_gen/fac195ac9cdce28b1f4016e3c10f388b_1063x1063_0x0_1063x1080_crop.jpg?ts=1784820812",
       "content": "Anne a créé l'école de danse en 1997. Diplômée du Conservatoire de Charleroi en danse classique et jazz, en passant par un perfectionnement au ballet d'Anvers et de Marseille, Anne passionnée par le contact humain et la pédagogie aura cette année près de 30 années d'expérience dans la région ! Elle gère au quotidien l'école ADK pour toutes les décisions et projets, les mises en scène, les assemblages de musiques, les différents shows et concours internationaux avec son équipe de confiance."
     },
-    "Corentin": {
-      "title": "Corentin",
-      "avatar": "https://annedkdanse.be/gallery/Gris%20Moderne%20Photos%20Voyage%20D%C3%A9pliant%203%20Volets%20Brochure%201.png?ts=1784984525",
-      "content": "Découvrez l'univers de Corentin."
-    },
-    "Mégan": {
-      "title": "Mégan",
-      "category": "Responsable décoration scénique, créatrice artistique des décors",
-      "avatar": "https://annedkdanse.be/gallery/482349329_1785755885609251_7586817620626532284_n.jpg?ts=1784984525",
-      "content": "Mégan est une véritable artiste de l'ombre, elle imagnie et crée les décors, ambiances et univers visuels qui donnent vie aux spectacles.  Grâce à son imagination et son talent artistique, elle nous transporte dans l'aventure ADK"
+    "Andrew": {
+      "title": "Andrew",
+      "category": "Logistique et technique",
+      "avatar": "https://annedkdanse.be/gallery_gen/b357bcb3e8bd30a1378c917bcc32d82e_876x812_fit.jpg?ts=1784984525",
+      "content": "Andrew gère toute la logistique, la création vidéo et toute la technique. Il veille à toutes la partie technique de l'école : powerpoint et vidéos pour les spectacles, réparations, installations et soutien logistique du Studio ADK."
     },
     "Sylvie": {
       "title": "Sylvie",
       "category": "Kinésithérapeute accompagnatrice des compagnies et professeurs",
       "avatar": "https://annedkdanse.be/gallery_gen/cffd52798af8c5887dcff43b132cb97a_603x628_0x0_603x761_crop.jpg?ts=1784984525",
-      "content": "Sylvie accompagne les danseurs dans leur préparation physique, le renforcement musculaire, la prévention des blessures et le suivi corporel des compagnies surtout avant un spectacle ou un concours.  Grâce à son expertise du corps en mouvement, elle aides les danseurs à développer force, équilibre et endurance tout en préservant leur bien-être physique."
+      "content": "Sylvie accompagne les danseurs dans leur préparation physique, le renforcement musculaire, la prévention des blessures et le suivi corporel des compagnies surtout avant un spectacle ou un concours. Grâce à son expertise du corps en mouvement, elle aide les danseurs à développer force, équilibre et endurance tout en préservant leur bien-être physique."
     },
-    "Charlotte": {
-      "title": "Charlotte",
-      "content": "Découvrez l'univers de Charlotte."
-    },
-    "Pauline": {
-      "title": "Pauline",
-      "content": "Bienvenue à l'École de danse ADK, un lieu où la passion du mouvement et de la danse prend vie.\n\nSpécialisée dans l'enseignement de diverses disciplines, notre école est dédiée\n\nà vous faire découvrir et perfectionner votre talent.\n\nQue vous soyez débutant ou danseur confirmé, nous proposons un environnement\n\naccueillant et professionnel pour tous.\n\nRejoignez-nous et laissez la danse devenir votre expression ultime de créativité et de plaisir.\n\nL'objectif pédagogique de l'école\n\nest de permettre aux élèves d'atteindre leur meilleur niveau\n\ndans une structure amateur exigeante.\n\nDiplômée du Concervatoire de Charleroi en danse classique et jazz, en passant par un perfectionnement au ballet d'Anvers et de Marseille (FR), Anne passionnée par le contact humain et la pédagogie aura cette année 28 année d'éxpérience dans la région !\n\nLes professeurs travaillent en concertation et participent\n\nà des Workshops, formations professionnelles, stages afin d'être toujours formés à la pointe des nouveautés."
-    },
-    "Alain": {
-      "title": "Alain",
-      "content": "Découvrez l'univers de Alain."
-    },
-    "Clémentine": {
-      "title": "Clémentine",
-      "content": "Découvrez l'univers de Clémentine."
-    },
-    "Adam": {
-      "title": "Adam",
-      "content": "Découvrez l'univers de Adam."
+    "Mégan": {
+      "title": "Mégan",
+      "category": "Responsable décoration scénique, créatrice artistique des décors",
+      "avatar": "https://annedkdanse.be/gallery/482349329_1785755885609251_7586817620626532284_n.jpg?ts=1784984525",
+      "content": "Mégan est une véritable artiste de l'ombre, elle imagine et crée les décors, ambiances et univers visuels qui donnent vie aux spectacles. Grâce à son imagination et son talent artistique, elle nous transporte dans l'aventure ADK."
     },
     "Daisy": {
       "title": "Daisy",
-      "content": "Découvrez l'univers de Daisy."
-    },
-    "Zoé": {
-      "title": "Zoé",
-      "avatar": "https://www.annedkdanse.be/gallery_gen/838a00fcf2733d092f124231f9975d09_500x500_fit.jpg?ts=1784984524",
-      "category": "Gestion et organisation",
-      "content": "Zoé organise la gestion des réunions diverses et fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
-    },
-    "Andrew": {
-      "title": "Andrew",
-      "avatar": "https://annedkdanse.be/gallery_gen/b357bcb3e8bd30a1378c917bcc32d82e_876x812_fit.jpg?ts=1784984525",
-      "category": "Logistique et technique",
-      "content": "Andrew gère toute la logistique, la création vidéo et toute la technique. Il veille à toutes la partie technique de l'école : powerpoint et vidéos pour les spectacles, réparations, installations et soutien logistique du Studio ADK."
-    },
-    "Loreen": {
-      "title": "Loreen",
-      "content": "Découvrez l'univers de Loreen."
-    },
-    "Maeva": {
-      "title": "Maeva",
-      "content": "Découvrez l'univers de Maeva."
-    },
-    "Jade": {
-      "title": "Jade",
-      "content": "Découvrez l'univers de Jade."
-    },
-    "Janis": {
-      "title": "Janis",
-      "avatar": "https://annedkdanse.be/gallery_gen/6762ccc16a5d867bc801e00528e3e9e8_394x500_fit.jpg?ts=1784984524",
-      "category": "Chorégraphe et professeure de jazz",
-      "content": "Janis est la chorégraphe et professeure de jazz pour les shows et concours tant en Belgique qu'à l'étranger. Elle fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
-    },
-    "Margaux": {
-      "title": "Margaux",
-      "avatar": "https://annedkdanse.be/gallery_gen/193ebf16dd3b5edab7a5bbc33a8dca3c_fit.png?ts=1784985733",
-      "category": "Gestion et organisation",
-      "content": "Margaux organise la gestion des réunions diverses et fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
-    },
-    "Jeanne": {
-      "title": "Jeanne",
-      "avatar": "https://annedkdanse.be/gallery_gen/b6de6418f02a107ed5facd151f65461b_fit.png?ts=1784984525",
-      "content": "Découvrez l'univers de Jeanne."
+      "styles": "Éveil & Initiation (3-5 ans)",
+      "avatar": "https://annedkdanse.be/gallery_gen/bcab6ca05caeee3c4005be65786f33f6_500x498_fit.jpg?ts=1784747270",
+      "modalImage": "https://annedkdanse.be/gallery_gen/bcab6ca05caeee3c4005be65786f33f6_500x498_fit.jpg?ts=1784747270",
+      "content": "Enseignante spécialisée en Éveil & Initiation pour les enfants de 3 à 5 ans. Passionnée par le jeune âge, Daisy guide les tout-petits dans leurs premiers pas dansés en développant leur motricité, leur coordination, leur écoute musicale et leur expression corporelle à travers une pédagogie ludique, douce et bienveillante au Studio ADK."
     },
     "Maurine": {
       "title": "Maurine",
-      "avatar": "https://annedkdanse.be/gallery_gen/0a716be772784745dccd4a8e75abef22_fit.png?ts=1784985733",
-      "modalImage": "https://annedkdanse.be/gallery_gen/0a716be772784745dccd4a8e75abef22_fit.png?ts=1784038327",
       "category": "Coordinatrice et chorégraphe principale",
+      "styles": "Hip-Hop · Street · Afro · Cies Moove & Unity",
+      "avatar": "https://www.annedkdanse.be/gallery_gen/97fba9ebb7c6f07caf4ed2a1889e5554_504x442_fit.jpg?ts=1784985733",
+      "modalImage": "https://www.annedkdanse.be/gallery_gen/97fba9ebb7c6f07caf4ed2a1889e5554_504x442_fit.jpg?ts=1784985733",
       "content": "Maurine est coordinatrice et chorégraphe principale pour les shows et concours en Belgique ainsi qu'à l'étranger. Elle s'occupe de la formation des futurs professeurs et grâce à son master en éducation physique sa pédagogie n'est plus à faire valoir. Elle suit en parallèle des cours chez Art Tendance à Limal, école dont la renommée professionnelle est bien connue dans le milieu de la danse."
     },
+    "Janis": {
+      "title": "Janis",
+      "category": "Chorégraphe et professeure de jazz",
+      "styles": "Contemporain · Jazz · Classique · Cie Team",
+      "avatar": "https://annedkdanse.be/gallery_gen/6762ccc16a5d867bc801e00528e3e9e8_394x500_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/6762ccc16a5d867bc801e00528e3e9e8_394x500_fit.jpg?ts=1784984524",
+      "content": "Janis est la chorégraphe et professeure de jazz, de danse classique et contemporaine pour les shows et concours tant en Belgique qu'à l'étranger. Elle dirige également la Compagnie Team. Elle fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien, transmettant rigueur artistique et plaisir de danser à tous ses élèves."
+    },
+    "Margaux_1": {
+      "title": "Margaux",
+      "category": "Gestion et organisation",
+      "styles": "Girly · Pomdance · Ragga · Adultes Hip-Hop/Ragga",
+      "avatar": "https://annedkdanse.be/gallery_gen/4318b6ec0738a6fc8e478e7755de4aa6_504x510_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/4318b6ec0738a6fc8e478e7755de4aa6_504x510_fit.jpg?ts=1784984524",
+      "content": "Margaux organise la gestion des réunions diverses de l'école et enseigne avec une énergie communicative ! Spécialisée en Girly, Pomdance, Ragga et cours adultes, elle crée une ambiance chaleureuse, rythmée et décomplexée pour permettre à chacun de s'affirmer et de progresser en confiance sur des sonorités dynamiques et caribéennes."
+    },
+    "Zoé": {
+      "title": "Zoé",
+      "category": "Gestion et organisation",
+      "styles": "Hip-Hop · Contemporain · Jazz",
+      "avatar": "https://annedkdanse.be/gallery_gen/838a00fcf2733d092f124231f9975d09_500x500_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/838a00fcf2733d092f124231f9975d09_500x500_fit.jpg?ts=1784984524",
+      "content": "Zoé organise la gestion des réunions diverses et enseigne le Hip-Hop, le Contemporain et le Jazz tant au Studio ADK qu'au Rox à Rouvroy. Toujours à l'écoute, motivante et passionnée, elle accompagne ses élèves dans l'apprentissage du rythme, du groove et de la technique corporelle dans une ambiance conviviale et stimulante."
+    },
+    "Maeva": {
+      "title": "Maeva",
+      "styles": "Street Jazz · Danse Urbaine Commerciale",
+      "avatar": "https://annedkdanse.be/gallery_gen/99a17601896124cd91f408e0d51cb6dd_504x436_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/99a17601896124cd91f408e0d51cb6dd_504x436_fit.jpg?ts=1784984524",
+      "content": "Professeure de Danse Urbaine Commerciale et de Street Jazz. Maeva apporte son expérience scénique et sa passion pour créer des chorégraphies modernes, percutantes et dignes des productions artistiques et clips musicaux actuels. Un cours idéal pour travailler l'attitude, la précision chorégraphique et la présence en scène."
+    },
+    "Charlotte": {
+      "title": "Charlotte",
+      "styles": "Contemporain · Jazz · Classique enfants",
+      "avatar": "https://annedkdanse.be/gallery_gen/570ff47d254ce984c70174311a6a76cf_504x484_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/570ff47d254ce984c70174311a6a76cf_504x484_fit.jpg?ts=1784984524",
+      "content": "Professeure de Danse Classique, de Jazz et de Contemporain pour les enfants et préadolescents. Douce, rigoureuse et très pédagogue, Charlotte transmet les bases techniques indispensables, la grâce, le maintien corporel et l'amour de la danse en accompagnant chaque élève à son propre rythme."
+    },
+    "Margaux_2": {
+      "title": "Margaux",
+      "styles": "Ragga",
+      "avatar": "https://annedkdanse.be/gallery_gen/9ca49af4ad91cc5f5c8008124ef1adba_390x488_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/9ca49af4ad91cc5f5c8008124ef1adba_390x488_fit.jpg?ts=1784984524",
+      "content": "Professeure de Ragga dancehall et Girly. Margaux vous embarque dans son univers ensoleillé, énergique et plein de style ! À travers des chorégraphies rythmées sur des musiques caribéennes et urbaines, elle développe la gestuelle, l'attitude et l'assurance de ses élèves dans une énergie 100% positive."
+    },
+    "Clémentine": {
+      "title": "Clémentine",
+      "styles": "Jazz enfants",
+      "avatar": "https://annedkdanse.be/gallery_gen/ad16bd282816bb7912c42f9872942f03_500x468_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/ad16bd282816bb7912c42f9872942f03_500x468_fit.jpg?ts=1784984524",
+      "content": "Professeure de Jazz pour enfants au Studio ADK. Clémentine initie les jeunes danseurs aux rythmes jazz, au travail d'appuis, à la souplesse et à la coordination. Grâce à son dynamisme et sa créativité, elle fait naître la passion de la scène chez ses jeunes élèves tout en s'amusant."
+    },
+    "Loreen": {
+      "title": "Loreen",
+      "styles": "Hip-Hop · Ragga",
+      "avatar": "https://annedkdanse.be/gallery_gen/d44a004fd7c771581c07d2fd09c18597_504x480_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/d44a004fd7c771581c07d2fd09c18597_504x480_fit.jpg?ts=1784984524",
+      "content": "Professeure de Hip-Hop et de Ragga, notamment au centre de Bertrix. Débordante d'énergie et de vitalité, Loreen partage sa passion des danses urbaines et caribéennes avec les enfants, adolescents et adultes. Ses cours sont rythmés par des enchaînements percutants et un esprit de groupe convivial."
+    },
+    "Jeanne": {
+      "title": "Jeanne",
+      "styles": "Hip-Hop enfants",
+      "avatar": "https://annedkdanse.be/gallery_gen/76507dc91e25065907fc6ae6eb458ae1_504x468_fit.jpg?ts=1784984524",
+      "modalImage": "https://annedkdanse.be/gallery_gen/76507dc91e25065907fc6ae6eb458ae1_504x468_fit.jpg?ts=1784984524",
+      "content": "Professeure de Hip-Hop pour enfants et préadolescents. Jeanne transmet les fondements, le rebond, le groove et l'attitude propre aux danses urbaines. Pédagogue et à l'écoute, elle accompagne ses élèves dans le développement de leur coordination corporelle et de leur musicalité."
+    },
+    "Pauline": {
+      "title": "Pauline",
+      "styles": "Hip-Hop · Ragga",
+      "avatar": "https://annedkdanse.be/gallery_gen/11e2ae7ce1b2ecfc0cc10fad5215686d_390x420_fit.jpg?ts=1784984525",
+      "modalImage": "https://annedkdanse.be/gallery_gen/11e2ae7ce1b2ecfc0cc10fad5215686d_390x420_fit.jpg?ts=1784984525",
+      "content": "Professeure de Hip-Hop et de Ragga. Pauline guide les élèves, des grands débutants aux niveaux intermédiaires, dans la maîtrise des pas de base, du style urbain et du lâcher-prise. Un cours motivant où l'énergie du groupe porte chaque danseur vers de superbes réalisations chorégraphiques."
+    },
+    "Florence": {
+      "title": "Florence",
+      "styles": "Pole Dance",
+      "avatar": "https://annedkdanse.be/gallery_gen/9c4496f7cc1201f8dc2b814d5e3d03ba_500x506_fit.jpg?ts=1784984525",
+      "modalImage": "https://annedkdanse.be/gallery_gen/9c4496f7cc1201f8dc2b814d5e3d03ba_500x506_fit.jpg?ts=1784984525",
+      "content": "Professeure de Pole Dance au Complexe Sportif de Florenville. Florence enseigne cette discipline aérienne et artistique qui allie force, souplesse, grâce et acrobatie. Dans un cadre sécurisé et bienveillant, elle permet à chaque élève de repousser ses limites physiques et de gagner en confiance en soi."
+    },
+    "Alain": {
+      "title": "Alain",
+      "styles": "Line Dance",
+      "avatar": "https://annedkdanse.be/gallery_gen/62ed1cee8ad84c5b9cf04c248eedbc5c_504x548_fit.jpg?ts=1784984525",
+      "modalImage": "https://annedkdanse.be/gallery_gen/62ed1cee8ad84c5b9cf04c248eedbc5c_504x548_fit.jpg?ts=1784984525",
+      "content": "Professeur de Line Dance au Centre Culturel d'Izel. Alain anime des cours chaleureux et accessibles à tous, où l'on apprend à danser en ligne et en synchronisation sur des styles musicaux variés (country, pop, rock, musiques du monde). Convivialité, rythme et bonne humeur garanties !"
+    },
+    "Adam": {
+      "title": "Adam",
+      "styles": "Break Dance · Hip-Hop Oldschool",
+      "avatar": "https://annedkdanse.be/gallery_gen/53002f7674b0b571a3485dc44d79a672_394x560_fit.jpg?ts=1784984525",
+      "modalImage": "https://annedkdanse.be/gallery_gen/53002f7674b0b571a3485dc44d79a672_394x560_fit.jpg?ts=1784984525",
+      "content": "Danseur professionnel et professeur de Break Dance (B-boying) et de Hip-Hop Oldschool (Popping, Locking, House Dance). Adam partage les véritables racines de la culture hip-hop, le footwork, les freezes et les power moves avec authenticité, passion et une pédagogie inspirante pour tous les niveaux."
+    },
+    "Corentin": {
+      "title": "Corentin",
+      "styles": "Contemporain · Ballet · Pointes · Girly",
+      "avatar": "https://annedkdanse.be/gallery_gen/45f52a4e5bc2be7181cc901a5d023472_500x542_fit.jpg?ts=1784984525",
+      "modalImage": "https://annedkdanse.be/gallery_gen/45f52a4e5bc2be7181cc901a5d023472_500x542_fit.jpg?ts=1784984525",
+      "content": "Danseur professionnel, chorégraphe et professeur de Danse Classique, Travail sur Pointes, Contemporain et Ateliers Chorégraphiques Girly/Contemporain. Exigeant et passionné par l'art du mouvement, Corentin accompagne les danseurs vers la précision académique et l'expression scénique la plus pointue."
+    },
+    "Jade": {
+      "title": "Jade",
+      "styles": "Ragga",
+      "avatar": "assets/images/ragga_dancer.png",
+      "modalImage": "assets/images/ragga_dancer.png",
+      "content": "Professeure de Ragga dancehall au Studio ADK. Jade transmet toute l'énergie et la chaleur des danses caribéennes dans une ambiance dynamique et conviviale."
+    }
   },
   "cours": {
     "eveil": {
