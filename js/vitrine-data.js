@@ -84,6 +84,18 @@ const VITRINE_DATA = {
       "styles": "Hip-Hop · Street · Afro · Cies Moove & Unity",
       "avatar": "https://www.annedkdanse.be/gallery_gen/97fba9ebb7c6f07caf4ed2a1889e5554_504x442_fit.jpg?ts=1784985733",
       "modalImage": "https://www.annedkdanse.be/gallery_gen/97fba9ebb7c6f07caf4ed2a1889e5554_504x442_fit.jpg?ts=1784985733",
+      "flyerStyle": {
+        "headerSubtitle": "Ecole de danse ADK",
+        "headerTitle": "Initiation 3-6 ans<br>Hiphop · Afro",
+        "badgeText": "Rencontre avec mes professeurs",
+        "paragraphs": [
+          "Je danse depuis que j'ai 6 ou 7 ans, et depuis ce jour-là, la danse fait partie intégrante de ma vie. Mon parcours a commencé chez <strong style=\"color:#ffffff; font-weight:700;\">ADK</strong>, un lieu qui est vite devenu ma deuxième maison. J'y ai d'abord grandi au sein d'une compagnie, avant d'avoir la chance de passer de l'autre côté et de transmettre à mon tour en tant que professeure.",
+          "Très vite, le <strong style=\"color:#ffffff; font-weight:700;\">hip-hop</strong> s'est imposé comme une évidence : un style qui colle parfaitement à mon énergie ! Plus récemment, j'ai découvert l'<strong style=\"color:#ffffff; font-weight:700;\">afro</strong>, un univers dans lequel je me sens incroyablement libre et épanouie.<br>Mais pour moi, la danse ne s'arrête jamais à ce qu'on maîtrise déjà. Je continue à me former régulièrement à Limal, aux côtés de professeurs inspirants qui m'aident à affiner ma technique. Je participe aussi à un maximum de workshops, en Belgique et ailleurs, parce que chaque cours, chaque rencontre est une occasion précieuse d'apprendre, de grandir et de repousser mes limites.",
+          "<div style=\"text-align:center; margin: 1.3rem 0; font-size: 1.15rem; font-style: italic; font-weight: 700; color: #FFE5D0; letter-spacing: 0.5px;\">« toujours avancer, toujours se dépasser »</div>",
+          "Je suis une personne dynamique, passionnée, j'aime quand ça bouge, quand l'énergie circule et se partage.<br>Pour moi, la danse, c'est bien plus qu'une passion : c'est mon langage, ma manière de m'exprimer, de vibrer et de me connecter aux autres.",
+          "<div style=\"text-align:center; margin-top: 1.3rem; font-size: 1.2rem; font-style: italic; font-weight: 700; color: #FFE5D0; letter-spacing: 0.5px;\">La danse ne se raconte pas, elle se vit.</div>"
+        ]
+      },
       "content": "Maurine est coordinatrice et chorégraphe principale pour les shows et concours en Belgique ainsi qu'à l'étranger. Elle s'occupe de la formation des futurs professeurs et grâce à son master en éducation physique sa pédagogie n'est plus à faire valoir. Elle suit en parallèle des cours chez Art Tendance à Limal, école dont la renommée professionnelle est bien connue dans le milieu de la danse."
     },
     "Janis": {

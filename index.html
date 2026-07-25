@@ -447,7 +447,7 @@
   </div>
 
   <!-- Data Script -->
-  <script src="js/vitrine-data.js?v=20260725_1638"></script>
+  <script src="js/vitrine-data.js?v=20260725_1648"></script>
 
   <!-- Simple script for Modals & Data Injection -->
   <script>
@@ -613,11 +613,34 @@
           }
           
           let contentHtml = '';
-          if (data.modalImage) {
-            contentHtml += `<div style="text-align: center; margin-bottom: ${isOnlyImage ? '0' : '1.8rem'};"><img src="${data.modalImage}" alt="${data.title}" style="max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: var(--radius-sm); box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); display: inline-block;"></div>`;
+          if (data.flyerStyle) {
+            const fs = data.flyerStyle;
+            const parsHtml = fs.paragraphs.map(p => `<p style="margin: 0 0 1rem 0; color: #ffffff; line-height: 1.75; font-size: 0.98rem; text-align: justify;">${p}</p>`).join('');
+            contentHtml += `
+              <div class="prof-flyer-container" style="display: flex; flex-wrap: wrap; gap: 0; background: #DC8765; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 1.8rem; border: 1px solid rgba(255,255,255,0.2);">
+                <div class="prof-flyer-left" style="flex: 1 1 300px; min-width: 260px; position: relative; background: #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; min-height: 320px;">
+                  <img src="${data.modalImage}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; min-height: 320px; max-height: 600px;">
+                  ${fs.badgeText ? `<div style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: rgba(92, 44, 30, 0.92); color: #ffffff; padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.25);">${fs.badgeText}</div>` : ''}
+                </div>
+                <div class="prof-flyer-right" style="flex: 1 1 360px; min-width: 260px; padding: clamp(1.5rem, 4vw, 2.8rem); display: flex; flex-direction: column; justify-content: center;">
+                  <div style="border-left: 4px solid #ffffff; padding-left: 1rem; margin-bottom: 1.8rem;">
+                    ${fs.headerSubtitle ? `<div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; color: #FFE5D0; font-weight: 600; margin-bottom: 0.2rem;">${fs.headerSubtitle}</div>` : ''}
+                    ${fs.headerTitle ? `<div style="font-size: clamp(1.4rem, 3vw, 1.85rem); font-family: var(--font-display); font-weight: 700; color: #ffffff; line-height: 1.2;">${fs.headerTitle}</div>` : ''}
+                  </div>
+                  <div style="font-family: var(--font-body);">
+                    ${parsHtml}
+                  </div>
+                </div>
+              </div>
+            `;
+          } else {
+            if (data.modalImage) {
+              contentHtml += `<div style="text-align: center; margin-bottom: ${isOnlyImage ? '0' : '1.8rem'};"><img src="${data.modalImage}" alt="${data.title}" style="max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: var(--radius-sm); box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); display: inline-block;"></div>`;
+            }
+            if (!isOnlyImage) {
+              contentHtml += `<div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-light); text-align: justify; padding: 0 0.5rem;">${data.content || ''}</div>`;
+            }
           }
-          if (!isOnlyImage) {
-            contentHtml += `<div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-light); text-align: justify; padding: 0 0.5rem;">${data.content || ''}</div>`;
             
             if (typeof ALL_COURSES !== 'undefined') {
               const profName = data.title.split(' ')[0].trim();
@@ -877,7 +900,7 @@
                   ${stylesBadge}
                 </div>
                 <div style="font-size: 0.82rem; color: #9C5858; font-weight: 600; margin-top: 0.5rem; display: flex; align-items: center; gap: 4px; opacity: 0.9;">
-                  <span>✨ Découvrir l'univers</span>
+                  <span>✨ Découvrir son univers</span>
                 </div>
               </div>
             `;
