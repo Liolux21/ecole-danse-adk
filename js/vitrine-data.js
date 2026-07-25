@@ -55,14 +55,19 @@ const VITRINE_DATA = {
     },
     "Corentin": {
       "title": "Corentin",
+      "avatar": "https://annedkdanse.be/gallery/Gris%20Moderne%20Photos%20Voyage%20D%C3%A9pliant%203%20Volets%20Brochure%201.png?ts=1784984525",
       "content": "Découvrez l'univers de Corentin."
     },
     "Mégan": {
       "title": "Mégan",
+      "category": "Responsable décoration scénique, créatrice artistique des décors",
+      "avatar": "https://annedkdanse.be/gallery/482349329_1785755885609251_7586817620626532284_n.jpg?ts=1784984525",
       "content": "Mégan est une véritable artiste de l'ombre, elle imagnie et crée les décors, ambiances et univers visuels qui donnent vie aux spectacles.  Grâce à son imagination et son talent artistique, elle nous transporte dans l'aventure ADK"
     },
     "Sylvie": {
       "title": "Sylvie",
+      "category": "Kinésithérapeute accompagnatrice des compagnies et professeurs",
+      "avatar": "https://annedkdanse.be/gallery_gen/cffd52798af8c5887dcff43b132cb97a_603x628_0x0_603x761_crop.jpg?ts=1784984525",
       "content": "Sylvie accompagne les danseurs dans leur préparation physique, le renforcement musculaire, la prévention des blessures et le suivi corporel des compagnies surtout avant un spectacle ou un concours.  Grâce à son expertise du corps en mouvement, elle aides les danseurs à développer force, équilibre et endurance tout en préservant leur bien-être physique."
     },
     "Charlotte": {
@@ -91,11 +96,13 @@ const VITRINE_DATA = {
     },
     "Zoé": {
       "title": "Zoé",
+      "avatar": "https://annedkdanse.be/gallery_gen/2efae55325721d8bae17f3691ea69881_fit.png?ts=1784984525",
       "category": "Gestion et organisation",
       "content": "Zoé organise la gestion des réunions diverses et fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
     },
     "Andrew": {
       "title": "Andrew",
+      "avatar": "https://annedkdanse.be/gallery_gen/b357bcb3e8bd30a1378c917bcc32d82e_876x812_fit.jpg?ts=1784984525",
       "category": "Logistique et technique",
       "content": "Andrew gère toute la logistique, la création vidéo et toute la technique. Il veille à toutes la partie technique de l'école : powerpoint et vidéos pour les spectacles, réparations, installations et soutien logistique du Studio ADK."
     },
@@ -113,16 +120,19 @@ const VITRINE_DATA = {
     },
     "Janis": {
       "title": "Janis",
+      "avatar": "https://annedkdanse.be/gallery_gen/6762ccc16a5d867bc801e00528e3e9e8_394x500_fit.jpg?ts=1784984524",
       "category": "Chorégraphe et professeure de jazz",
       "content": "Janis est la chorégraphe et professeure de jazz pour les shows et concours tant en Belgique qu'à l'étranger. Elle fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
     },
     "Margaux": {
       "title": "Margaux",
+      "avatar": "https://annedkdanse.be/gallery_gen/4318b6ec0738a6fc8e478e7755de4aa6_504x510_fit.jpg?ts=1784984524",
       "category": "Gestion et organisation",
       "content": "Margaux organise la gestion des réunions diverses et fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
     },
     "Jeanne": {
       "title": "Jeanne",
+      "avatar": "https://annedkdanse.be/gallery_gen/b6de6418f02a107ed5facd151f65461b_fit.png?ts=1784984525",
       "content": "Découvrez l'univers de Jeanne."
     },
     "Maurine": {

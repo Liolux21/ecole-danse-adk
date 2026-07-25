@@ -736,7 +736,9 @@
           "Chorégraphe et professeure de jazz",
           "Gestion et organisation",
           "Logistique et technique",
-          "Nos Professeurs"
+          "Nos Professeurs",
+          "Kinésithérapeute accompagnatrice des compagnies et professeurs",
+          "Responsable décoration scénique, créatrice artistique des décors"
         ];
         
         let html = "";
@@ -744,9 +746,39 @@
           if (!groups[cat] || groups[cat].length === 0) continue;
           html += `<div style="text-align: center;"><h3 style="color: #9C5858; margin: 3rem 0 2rem 0; font-family: var(--font-display); font-size: 1.5rem; display: inline-block; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);">${cat}</h3></div>`;
           
-          if (cat === "Fondatrice & Directrice") {
+          if (cat === "Gestion et organisation") {
+            const zoe = groups[cat].find(p => p.title.includes("Zoé")) || groups[cat][0];
+            const margaux = groups[cat].find(p => p.title.includes("Margaux")) || groups[cat][1] || zoe;
+            const zoePhoto = zoe.avatar || "https://annedkdanse.be/gallery_gen/2efae55325721d8bae17f3691ea69881_fit.png?ts=1784984525";
+            const margauxPhoto = margaux.avatar || "https://annedkdanse.be/gallery_gen/4318b6ec0738a6fc8e478e7755de4aa6_504x510_fit.jpg?ts=1784984524";
+            const textContent = "Zoé et Margaux organisent la gestion des réunions diverses et font partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien.";
+            html += `
+              <div class="card-vitrine" style="cursor: default; padding: 2.5rem 2rem; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 15px rgba(0,0,0,0.08); max-width: 950px; margin: 0 auto 1.5rem auto; text-align: left;">
+                <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: center;">
+                  <div style="flex: 0 0 auto; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                      <img src="${zoePhoto}" alt="Zoé" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                      <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.4rem; margin-top: 0.8rem; margin-bottom: 0; font-weight: 700;">Zoé</h4>
+                    </div>
+                    <div style="text-align: center;">
+                      <img src="${margauxPhoto}" alt="Margaux" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                      <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.4rem; margin-top: 0.8rem; margin-bottom: 0; font-weight: 700;">Margaux</h4>
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 320px;">
+                    <p style="color: #4A2E2E; line-height: 1.8; font-size: 0.95rem; text-align: justify; margin: 0;">
+                      ${textContent}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            `;
+            continue;
+          }
+
+          if (cat !== "Nos Professeurs") {
             for (const p of groups[cat]) {
-              const photoUrl = p.avatar || "https://www.annedkdanse.be/gallery_gen/fac195ac9cdce28b1f4016e3c10f388b_1063x1063_0x0_1063x1080_crop.jpg?ts=1784820812";
+              const photoUrl = p.avatar || "assets/images/compagnie_stage.png";
               html += `
                 <div class="card-vitrine" style="cursor: default; padding: 2.5rem 2rem; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 15px rgba(0,0,0,0.08); max-width: 950px; margin: 0 auto 1.5rem auto; text-align: left;">
                   <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: center;">
