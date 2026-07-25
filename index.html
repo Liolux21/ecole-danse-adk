@@ -220,7 +220,22 @@
       <a href="#contact" class="nav-link">Contact</a>
       <a href="portail.html" class="btn btn-outline" style="padding: 0.4rem 1rem;">Portail</a>
     </div>
+    <button class="nav-burger" aria-label="Menu" id="burger" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button onclick="document.getElementById('mobile-menu').classList.remove('open')" style="position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; font-size: 2.8rem; color: #9C5858; cursor: pointer;">×</button>
+    <a class="nav-link" href="#accueil" onclick="document.getElementById('mobile-menu').classList.remove('open')">Accueil</a>
+    <a class="nav-link" href="#ecole" onclick="document.getElementById('mobile-menu').classList.remove('open')">L'École</a>
+    <a class="nav-link" href="#histoire" onclick="document.getElementById('mobile-menu').classList.remove('open')">Notre Histoire</a>
+    <a class="nav-link" href="#cours" onclick="document.getElementById('mobile-menu').classList.remove('open')">Cours</a>
+    <a class="nav-link" href="#equipe" onclick="document.getElementById('mobile-menu').classList.remove('open')">L'Équipe</a>
+    <a class="nav-link" href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+    <a class="btn btn-primary" href="portail.html">Portail membres</a>
+  </div>
 
   <!-- Hero Section -->
   <section id="accueil" class="hero">
@@ -235,24 +250,9 @@
       <h1 class="hero-title" style="font-size: clamp(2rem, 8vw, 4rem); line-height: 1.2; margin-bottom: 1.5rem; word-wrap: break-word; overflow-wrap: break-word;">
         <span style="color: #ffffff;">Bienvenue chez</span> <br class="mobile-break" style="display: none;"><span style="color: #9C5858;">ADK</span>
       </h1>
-      <p class="hero-subtitle" style="font-weight: 600; letter-spacing: 1px; font-size: clamp(0.9rem, 3.5vw, 1.1rem); color: var(--white); text-shadow: none; line-height: 1.5; word-wrap: break-word;">
+      <p class="hero-subtitle" style="font-weight: 600; letter-spacing: 1px; font-size: clamp(0.9rem, 3.5vw, 1.1rem); color: var(--white); text-shadow: none; line-height: 1.5; word-wrap: break-word; margin-bottom: 2rem;">
         Une famille &middot; Une passion &middot; Une histoire &middot; Une vie
       </p>
-      
-      <div class="mobile-only-hero-buttons" style="width: 100%; max-width: 320px; margin: 0 auto 3rem auto;">
-        <div style="position: relative;">
-          <select onchange="if(this.value) window.location.href=this.value;" style="width: 100%; padding: 0.8rem 1.2rem; border-radius: 50px; background: linear-gradient(135deg, #B68989, #9C5858); color: #ffffff; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; border: none; box-shadow: 0 4px 15px rgba(156,88,88,0.3); appearance: none; -webkit-appearance: none; cursor: pointer; text-align: center; outline: none;">
-            <option value="" disabled selected>✨ Choisir une rubrique...</option>
-            <option value="#ecole" style="background: #ffffff; color: #9C5858;">🏫 L'École</option>
-            <option value="#histoire" style="background: #ffffff; color: #9C5858;">📖 Notre Histoire</option>
-            <option value="#cours" style="background: #ffffff; color: #9C5858;">🩰 Découvrir nos cours</option>
-            <option value="#equipe" style="background: #ffffff; color: #9C5858;">👥 Notre Équipe</option>
-            <option value="#contact" style="background: #ffffff; color: #9C5858;">✉️ Contact</option>
-            <option value="portail.html" style="background: #ffffff; color: #9C5858;">🔐 Portail membres</option>
-          </select>
-          <div style="position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: #ffffff; font-size: 0.8rem;">▼</div>
-        </div>
-      </div>
 
       <div class="hero-stats" style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; padding-top: 2.5rem; border-top: 1px solid rgba(0,0,0,0.1);">
         <div style="text-align: center;">
@@ -389,56 +389,12 @@
   </section>
 
   <!-- Section Cours -->
-  <section id="cours" class="vitrine-section">
+  <section id="cours" class="vitrine-section" style="background: var(--dark-2); border-radius: var(--radius); box-shadow: var(--shadow-card);">
     <h2 class="vitrine-title"><span style="color: #ffffff;">Nos</span> <span style="color: #9C5858;">Cours</span></h2>
     <p class="vitrine-subtitle"><strong>40 cours dans 3 lieux — Studio ADK, Au Rox et Bertrix.</strong><br>De l'éveil pour les tout-petits aux compagnies de haut niveau, notre école propose un large éventail de styles afin de répondre à toutes les envies et à toutes les sensibilités.</p>
     
     <div class="grid-3" id="cours-grid">
       <!-- Injected dynamically by JS -->
-    </div>
-  </section>
-
-  <!-- Carrousel de Photos -->
-  <section class="vitrine-section" style="padding-top: 1rem; padding-bottom: 3.5rem;">
-    <div style="text-align: center; margin-bottom: 1.5rem;">
-      <h3 style="color: #ffffff; font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.2rem;">L'Ambiance <span style="color: #9C5858;">ADK</span></h3>
-      <p style="color: var(--text-light); font-size: 0.95rem;">Un aperçu de nos spectacles, cours et moments de partage.</p>
-    </div>
-    <div class="carousel-container" style="max-width: 900px; margin: 0 auto; position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 2px solid var(--gold);">
-      <div id="photo-carousel" style="display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); height: 400px;">
-        <div class="carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
-          <img src="assets/images/compagnie_stage.png" alt="Spectacles et compagnies" style="width: 100%; height: 100%; object-fit: cover;">
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2.5rem 1.5rem 1rem 1.5rem; color: #fff; text-align: center;">
-            <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.2rem; color: #E8D0C3;">Des spectacles époustouflants</h4>
-            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">Nos élèves et compagnies sur scène lors de nos événements.</p>
-          </div>
-        </div>
-        <div class="carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
-          <img src="assets/images/dance_contemporary.png" alt="Passion et expression" style="width: 100%; height: 100%; object-fit: cover;">
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2.5rem 1.5rem 1rem 1.5rem; color: #fff; text-align: center;">
-            <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.2rem; color: #E8D0C3;">Une ambiance dynamique et chaleureuse</h4>
-            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">L'expression artistique et le plaisir au cœur de chaque cours.</p>
-          </div>
-        </div>
-        <div class="carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
-          <img src="assets/images/hiphop_dancer.png" alt="Énergie urbaine" style="width: 100%; height: 100%; object-fit: cover;">
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2.5rem 1.5rem 1rem 1.5rem; color: #fff; text-align: center;">
-            <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.2rem; color: #E8D0C3;">Énergie & Dépassement de soi</h4>
-            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">Des styles variés pour toutes les générations et toutes les envies.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Flèches de navigation -->
-      <button onclick="moveCarousel(-1)" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); background: rgba(234, 213, 213, 0.85); color: #9C5858; width: 42px; height: 42px; border-radius: 50%; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; z-index: 5;" onmouseover="this.style.background='#ffffff'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(234, 213, 213, 0.85)'; this.style.transform='translateY(-50%)'">&#10094;</button>
-      <button onclick="moveCarousel(1)" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: rgba(234, 213, 213, 0.85); color: #9C5858; width: 42px; height: 42px; border-radius: 50%; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; z-index: 5;" onmouseover="this.style.background='#ffffff'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(234, 213, 213, 0.85)'; this.style.transform='translateY(-50%)'">&#10095;</button>
-      
-      <!-- Indicateurs / Dots -->
-      <div id="carousel-dots" style="position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 10;">
-        <span class="carousel-dot active" onclick="goCarousel(0)" style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: 1; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></span>
-        <span class="carousel-dot" onclick="goCarousel(1)" style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: 0.5; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></span>
-        <span class="carousel-dot" onclick="goCarousel(2)" style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: 0.5; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></span>
-      </div>
     </div>
   </section>
 
@@ -477,7 +433,7 @@
 
   <!-- Modal Dynamique (Cours & Professeurs) -->
   <div class="vitrine-modal" id="modal-dynamic">
-    <div class="vitrine-modal-content" style="max-width: 850px;">
+    <div class="vitrine-modal-content" style="max-width: 1150px; width: 94%;">
       <button class="vitrine-modal-close" onclick="closeModal('modal-dynamic')">×</button>
       <h3 class="vitrine-title" id="modal-dynamic-title" style="margin: 0 0 0.4rem 0; font-size: 1.6rem; text-align: left; color: #9C5858;">Titre</h3>
       <div id="modal-dynamic-content" style="color: var(--text-light); line-height: 1.5; white-space: pre-wrap;">
@@ -496,6 +452,7 @@
     }
     function closeModal(id) {
       document.getElementById(id).classList.remove('active');
+      if (window.modalCarouselInterval) clearInterval(window.modalCarouselInterval);
     }
     
     function openDynamic(type, key) {
@@ -505,13 +462,51 @@
         if (type === 'cours') {
           document.getElementById('modal-dynamic-title').innerText = `Pôle ${data.title}`;
           
+          const stylePhotos = {
+            'hiphop': ['assets/images/hiphop_dancer.png', 'assets/images/breakdance_freeze.png', 'assets/images/ragga_dancer.png'],
+            'classique': ['assets/images/dance_ballet.png', 'assets/images/compagnie_stage.png', 'assets/images/hero_dancer.png'],
+            'jazz': ['assets/images/dance_jazz.png', 'assets/images/dance_contemporary.png', 'assets/images/compagnie_stage.png'],
+            'contemporain': ['assets/images/dance_contemporary.png', 'assets/images/compagnie_stage.png', 'assets/images/hero_dancer.png'],
+            'ragga': ['assets/images/ragga_dancer.png', 'assets/images/hiphop_dancer.png', 'assets/images/breakdance_freeze.png'],
+            'eveil': ['assets/images/eveil_kids.png', 'assets/images/dance_ballet.png', 'assets/images/hero_dancer.png'],
+            'compagnies': ['assets/images/compagnie_stage.png', 'assets/images/dance_contemporary.png', 'assets/images/dance_ballet.png'],
+            'bienetre': ['assets/images/hero_dancer.png', 'assets/images/dance_contemporary.png', 'assets/images/dance_ballet.png']
+          };
+          const photos = stylePhotos[key] || [data.modalImage || 'assets/images/hero_dancer.png', 'assets/images/compagnie_stage.png', 'assets/images/dance_contemporary.png'];
+
+          let carouselHtml = `
+            <div class="modal-carousel-container" style="position: relative; width: 100%; height: 250px; border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.15); border: 2px solid var(--gold);">
+              <div id="modal-carousel-track" style="display: flex; height: 100%; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+          `;
+          photos.forEach((src, idx) => {
+            carouselHtml += `
+                <div class="modal-carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
+                  <img src="${src}" alt="Photo ${idx+1}" style="width: 100%; height: 100%; object-fit: cover;">
+                  <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);"></div>
+                </div>
+            `;
+          });
+          carouselHtml += `
+              </div>
+              <button onclick="moveModalCarousel(-1)" style="position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.9); color: #9C5858; width: 38px; height: 38px; border-radius: 50%; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.25); transition: 0.2s; z-index: 5;">&#10094;</button>
+              <button onclick="moveModalCarousel(1)" style="position: absolute; right: 0.8rem; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.9); color: #9C5858; width: 38px; height: 38px; border-radius: 50%; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.25); transition: 0.2s; z-index: 5;">&#10095;</button>
+              <div id="modal-carousel-dots" style="position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 10;">
+          `;
+          photos.forEach((_, idx) => {
+            carouselHtml += `<span class="modal-dot ${idx === 0 ? 'active' : ''}" onclick="goModalCarousel(${idx})" style="width: 9px; height: 9px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: ${idx === 0 ? '1' : '0.4'}; box-shadow: 0 0 5px rgba(0,0,0,0.6);"></span>`;
+          });
+          carouselHtml += `
+              </div>
+            </div>
+          `;
+
           let subCoursesHtml = '';
           if (typeof ALL_COURSES !== 'undefined') {
             const styleCourses = ALL_COURSES.filter(course => course.style === key);
             if (styleCourses.length > 0) {
-              subCoursesHtml = `<div style="margin-top: 0.5rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 0.5rem;">
-                <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 0.5rem 0;">Liste des cours (${styleCourses.length})</h4>
-                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.6rem;">
+              subCoursesHtml = `<div style="margin-top: 0.8rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 0.8rem;">
+                <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 0.6rem 0;">Liste des cours (${styleCourses.length})</h4>
+                <div class="modal-courses-grid">
               `;
               styleCourses.forEach(course => {
                 let lieuName = course.lieu;
@@ -534,19 +529,19 @@
 
                 subCoursesHtml += `
                   <div class="course-card" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2); height: 100%; background: #C68B8B; border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column;">
-                    <div style="height: 75px; width: 100%; overflow: hidden; position: relative; background: #222;">
+                    <div style="height: 85px; width: 100%; overflow: hidden; position: relative; background: #222;">
                       <img src="${course.image || 'assets/images/hero_dancer.png'}" alt="${course.name}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
                       <div style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); padding: 2px 7px; border-radius: 50px; font-size: 0.65rem; color: #fff; font-weight: 600;">${course.levels}</div>
                     </div>
-                    <div class="course-body" style="padding: 0.55rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; background: #C68B8B;">
+                    <div class="course-body" style="padding: 0.65rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; background: #C68B8B;">
                       <div>
-                        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.3rem;">
+                        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.35rem;">
                           ${lieuBadge}
                           ${course.biweekly ? '<span style="font-size:0.65rem;color:#ffffff;background:rgba(0,0,0,0.25);padding:0.1rem 0.5rem;border-radius:50px;font-weight:600;">1 sem/2</span>' : ''}
                         </div>
-                        <h3 class="course-name" style="font-size: 0.92rem; margin: 0.2rem 0 0.35rem 0; color: #ffffff; font-family: var(--font-display); font-weight: 700; line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">${course.name}</h3>
+                        <h3 class="course-name" style="font-size: 0.95rem; margin: 0.2rem 0 0.4rem 0; color: #ffffff; font-family: var(--font-display); font-weight: 700; line-height: 1.25; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">${course.name}</h3>
                       </div>
-                      <div class="course-meta" style="margin-top: 0.35rem; font-size: 0.75rem; display: flex; flex-direction: column; gap: 0.25rem; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 0.35rem;">
+                      <div class="course-meta" style="margin-top: 0.4rem; font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.28rem; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 0.4rem;">
                         <span class="course-meta-item" style="color: #ffffff; font-weight: 600; display: flex; align-items: center;"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-right:5px;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${course.schedule}</span></span>
                         <span class="course-meta-item" style="color: #ffffff; font-weight: 600; display: flex; align-items: center;"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-right:5px;flex-shrink:0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>${course.ages}</span></span>
                         <span class="course-meta-item" style="color: #ffffff; font-weight: 600; display: flex; align-items: center;">${profAvatarHtml}<span>${course.prof}</span></span>
@@ -560,16 +555,47 @@
           }
 
           document.getElementById('modal-dynamic-content').innerHTML = `
-            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-start;">
-               <div style="flex: 1; min-width: 250px;">
-                  <p style="font-size: 0.9rem; line-height: 1.45; margin: 0; color: var(--text-light);">${data.content}</p>
-               </div>
-               <div style="flex: 1; min-width: 250px;">
-                  <img src="${data.modalImage}" alt="${data.title}" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: var(--radius-sm); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-               </div>
+            ${carouselHtml}
+            <div style="margin-bottom: 0.5rem;">
+               <p style="font-size: 0.95rem; line-height: 1.5; margin: 0; color: var(--text-light); text-align: justify;">${data.content}</p>
             </div>
             ${subCoursesHtml}
           `;
+
+          let modalSlide = 0;
+          const modalTotalSlides = photos.length;
+          window.moveModalCarousel = function(dir) {
+            modalSlide = (modalSlide + dir + modalTotalSlides) % modalTotalSlides;
+            updateModalCarousel();
+            resetModalCarouselTimer();
+          };
+          window.goModalCarousel = function(idx) {
+            modalSlide = idx;
+            updateModalCarousel();
+            resetModalCarouselTimer();
+          };
+          function updateModalCarousel() {
+            const track = document.getElementById('modal-carousel-track');
+            if (track) {
+              track.style.transform = `translateX(-${modalSlide * 100}%)`;
+              const dots = document.querySelectorAll('#modal-carousel-dots .modal-dot');
+              dots.forEach((dot, idx) => {
+                dot.style.opacity = idx === modalSlide ? '1' : '0.4';
+              });
+            }
+          }
+          function resetModalCarouselTimer() {
+            if (window.modalCarouselInterval) clearInterval(window.modalCarouselInterval);
+            window.modalCarouselInterval = setInterval(() => {
+              if (document.getElementById('modal-dynamic').classList.contains('active')) {
+                window.moveModalCarousel(1);
+              } else {
+                if (window.modalCarouselInterval) clearInterval(window.modalCarouselInterval);
+              }
+            }, 4000);
+          }
+          modalSlide = 0;
+          resetModalCarouselTimer();
         } else {
           document.getElementById('modal-dynamic-title').innerText = data.title;
           
@@ -583,35 +609,6 @@
         }
         openModal('modal-dynamic');
       }
-    }
-
-    let currentSlide = 0;
-    const totalSlides = 3;
-    let carouselTimer = setInterval(() => moveCarousel(1), 4500);
-
-    function moveCarousel(direction) {
-      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-      updateCarousel();
-      resetCarouselTimer();
-    }
-    function goCarousel(index) {
-      currentSlide = index;
-      updateCarousel();
-      resetCarouselTimer();
-    }
-    function updateCarousel() {
-      const track = document.getElementById('photo-carousel');
-      if (track) {
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-        const dots = document.querySelectorAll('#carousel-dots .carousel-dot');
-        dots.forEach((dot, idx) => {
-          dot.style.opacity = idx === currentSlide ? '1' : '0.5';
-        });
-      }
-    }
-    function resetCarouselTimer() {
-      clearInterval(carouselTimer);
-      carouselTimer = setInterval(() => moveCarousel(1), 4500);
     }
 
     function toggleTimeline(element) {
@@ -687,7 +684,7 @@
             : `<div class="course-img-placeholder" style="background:var(--dark-3);display:flex;align-items:center;justify-content:center;">${c.title}</div>`;
 
           coursHtml += `
-            <div class="course-card" onclick="openDynamic('cours', '${key}')" style="cursor: pointer; display: block; height: 100%;">
+            <div class="course-card" onclick="openDynamic('cours', '${key}')" style="background: #EAD5D5; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; display: block; height: 100%; transition: transform 0.35s;">
               ${avatarHtml}
               <div class="course-body">
                 <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.75rem;">
