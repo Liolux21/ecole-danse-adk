@@ -96,7 +96,7 @@ const VITRINE_DATA = {
     },
     "Zoé": {
       "title": "Zoé",
-      "avatar": "https://annedkdanse.be/gallery_gen/2efae55325721d8bae17f3691ea69881_fit.png?ts=1784984525",
+      "avatar": "https://www.annedkdanse.be/gallery_gen/838a00fcf2733d092f124231f9975d09_500x500_fit.jpg?ts=1784984524",
       "category": "Gestion et organisation",
       "content": "Zoé organise la gestion des réunions diverses et fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
     },
@@ -126,7 +126,7 @@ const VITRINE_DATA = {
     },
     "Margaux": {
       "title": "Margaux",
-      "avatar": "https://annedkdanse.be/gallery_gen/4318b6ec0738a6fc8e478e7755de4aa6_504x510_fit.jpg?ts=1784984524",
+      "avatar": "https://annedkdanse.be/gallery_gen/193ebf16dd3b5edab7a5bbc33a8dca3c_fit.png?ts=1784985733",
       "category": "Gestion et organisation",
       "content": "Margaux organise la gestion des réunions diverses et fait partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien."
     },
@@ -137,7 +137,7 @@ const VITRINE_DATA = {
     },
     "Maurine": {
       "title": "Maurine",
-      "avatar": "https://annedkdanse.be/gallery/Mau%20mau.jpg?ts=1784038327",
+      "avatar": "https://annedkdanse.be/gallery_gen/0a716be772784745dccd4a8e75abef22_fit.png?ts=1784985733",
       "modalImage": "https://annedkdanse.be/gallery_gen/0a716be772784745dccd4a8e75abef22_fit.png?ts=1784038327",
       "category": "Coordinatrice et chorégraphe principale",
       "content": "Maurine est coordinatrice et chorégraphe principale pour les shows et concours en Belgique ainsi qu'à l'étranger. Elle s'occupe de la formation des futurs professeurs et grâce à son master en éducation physique sa pédagogie n'est plus à faire valoir. Elle suit en parallèle des cours chez Art Tendance à Limal, école dont la renommée professionnelle est bien connue dans le milieu de la danse."

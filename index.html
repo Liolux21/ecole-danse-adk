@@ -735,8 +735,8 @@
           "Coordinatrice et chorégraphe principale",
           "Chorégraphe et professeure de jazz",
           "Gestion et organisation",
-          "Logistique et technique",
           "Nos Professeurs",
+          "Logistique et technique",
           "Kinésithérapeute accompagnatrice des compagnies et professeurs",
           "Responsable décoration scénique, créatrice artistique des décors"
         ];
@@ -749,19 +749,23 @@
           if (cat === "Gestion et organisation") {
             const zoe = groups[cat].find(p => p.title.includes("Zoé")) || groups[cat][0];
             const margaux = groups[cat].find(p => p.title.includes("Margaux")) || groups[cat][1] || zoe;
-            const zoePhoto = zoe.avatar || "https://annedkdanse.be/gallery_gen/2efae55325721d8bae17f3691ea69881_fit.png?ts=1784984525";
-            const margauxPhoto = margaux.avatar || "https://annedkdanse.be/gallery_gen/4318b6ec0738a6fc8e478e7755de4aa6_504x510_fit.jpg?ts=1784984524";
+            const zoePhoto = zoe.avatar || "https://www.annedkdanse.be/gallery_gen/838a00fcf2733d092f124231f9975d09_500x500_fit.jpg?ts=1784984524";
+            const margauxPhoto = margaux.avatar || "https://annedkdanse.be/gallery_gen/193ebf16dd3b5edab7a5bbc33a8dca3c_fit.png?ts=1784985733";
             const textContent = "Zoé et Margaux organisent la gestion des réunions diverses et font partie de la merveilleuse équipe passionnée, dévouée et pédagogue qui accompagne Anne au quotidien.";
             html += `
               <div class="card-vitrine" style="cursor: default; padding: 2.5rem 2rem; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 15px rgba(0,0,0,0.08); max-width: 950px; margin: 0 auto 1.5rem auto; text-align: left;">
                 <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: center;">
-                  <div style="flex: 0 0 auto; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                  <div style="flex: 0 0 auto; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                     <div style="text-align: center;">
-                      <img src="${zoePhoto}" alt="Zoé" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                      <div style="width: 170px; height: 170px; border-radius: 50%; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin: 0 auto;">
+                        <img src="${zoePhoto}" alt="Zoé" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.15); transform-origin: center 20%;">
+                      </div>
                       <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.4rem; margin-top: 0.8rem; margin-bottom: 0; font-weight: 700;">Zoé</h4>
                     </div>
                     <div style="text-align: center;">
-                      <img src="${margauxPhoto}" alt="Margaux" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                      <div style="width: 170px; height: 170px; border-radius: 50%; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin: 0 auto;">
+                        <img src="${margauxPhoto}" alt="Margaux" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.35); transform-origin: center 20%;">
+                      </div>
                       <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.4rem; margin-top: 0.8rem; margin-bottom: 0; font-weight: 700;">Margaux</h4>
                     </div>
                   </div>
@@ -779,11 +783,19 @@
           if (cat !== "Nos Professeurs") {
             for (const p of groups[cat]) {
               const photoUrl = p.avatar || "assets/images/compagnie_stage.png";
+              const isMaurine = p.title.includes("Maurine");
+              const circleSize = isMaurine ? "190px" : "160px";
+              const imgStyles = isMaurine 
+                ? "width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.35); transform-origin: center 20%;"
+                : "width: 100%; height: 100%; object-fit: cover; object-position: center 20%;";
+
               html += `
                 <div class="card-vitrine" style="cursor: default; padding: 2.5rem 2rem; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 15px rgba(0,0,0,0.08); max-width: 950px; margin: 0 auto 1.5rem auto; text-align: left;">
                   <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: center;">
                     <div style="flex: 0 0 auto; text-align: center;">
-                      <img src="${photoUrl}" alt="${p.title}" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                      <div style="width: ${circleSize}; height: ${circleSize}; border-radius: 50%; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin: 0 auto;">
+                        <img src="${photoUrl}" alt="${p.title}" style="${imgStyles}">
+                      </div>
                       <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.5rem; margin-top: 1rem; margin-bottom: 0; font-weight: 700;">${p.title}</h4>
                     </div>
                     <div style="flex: 1 1 320px;">
