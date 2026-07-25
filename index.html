@@ -447,7 +447,7 @@
   </div>
 
   <!-- Data Script -->
-  <script src="js/vitrine-data.js?v=20260725_1635"></script>
+  <script src="js/vitrine-data.js?v=20260725_1638"></script>
 
   <!-- Simple script for Modals & Data Injection -->
   <script>
@@ -464,7 +464,11 @@
         const data = VITRINE_DATA[type][key];
         
         if (type === 'cours') {
-          document.getElementById('modal-dynamic-title').innerText = `Pôle ${data.title}`;
+          const titleEl = document.getElementById('modal-dynamic-title');
+          if (titleEl) {
+            titleEl.innerText = `Pôle ${data.title}`;
+            titleEl.style.display = '';
+          }
           
           const stylePhotos = {
             'hiphop': ['assets/images/hiphop_dancer.png', 'assets/images/breakdance_freeze.png', 'assets/images/ragga_dancer.png'],
@@ -601,10 +605,14 @@
           modalSlide = 0;
           resetModalCarouselTimer();
         } else {
-          document.getElementById('modal-dynamic-title').innerText = data.title;
+          const isOnlyImage = data.onlyImage || data.title.includes("Daisy");
+          const titleEl = document.getElementById('modal-dynamic-title');
+          if (titleEl) {
+            titleEl.innerText = data.title;
+            titleEl.style.display = isOnlyImage ? 'none' : '';
+          }
           
           let contentHtml = '';
-          const isOnlyImage = data.onlyImage || data.title.includes("Daisy");
           if (data.modalImage) {
             contentHtml += `<div style="text-align: center; margin-bottom: ${isOnlyImage ? '0' : '1.8rem'};"><img src="${data.modalImage}" alt="${data.title}" style="max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: var(--radius-sm); box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); display: inline-block;"></div>`;
           }
