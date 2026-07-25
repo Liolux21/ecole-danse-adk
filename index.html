@@ -12,11 +12,6 @@
   <link rel="stylesheet" href="css/style.css?v=13">
   <style>
     /* Vitrine Specific Styles */
-    .vitrine-section {
-      padding: 6rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
     .vitrine-title {
       font-family: var(--font-display);
       font-size: 2.5rem;
@@ -238,28 +233,31 @@
         Saison 2026-2027 Ouverte
       </div>
       <h1 class="hero-title" style="font-size: clamp(2rem, 8vw, 4rem); line-height: 1.2; margin-bottom: 1.5rem; word-wrap: break-word; overflow-wrap: break-word;">
-        <span style="color: #222;">Bienvenue chez</span> <br class="mobile-break" style="display: none;"><span style="color: #9C5858;">ADK</span>
+        <span style="color: #ffffff;">Bienvenue chez</span> <br class="mobile-break" style="display: none;"><span style="color: #9C5858;">ADK</span>
       </h1>
       <p class="hero-subtitle" style="font-weight: 600; letter-spacing: 1px; font-size: clamp(0.9rem, 3.5vw, 1.1rem); color: var(--white); text-shadow: none; line-height: 1.5; word-wrap: break-word;">
         Une famille &middot; Une passion &middot; Une histoire &middot; Une vie
       </p>
       
-      <div class="mobile-only-hero-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
-        <a href="#histoire" class="btn btn-primary">Découvrir notre histoire</a>
-        <a href="#cours" class="btn btn-primary">Découvrir nos cours</a>
-        <a href="#equipe" class="btn btn-primary">Découvrir notre équipe</a>
-        <a href="#inscriptions" class="btn btn-primary">Inscriptions</a>
-        <a href="portail.html" class="btn btn-primary">Portail membres</a>
+      <div class="mobile-only-hero-buttons" style="width: 100%; max-width: 320px; margin: 0 auto 3rem auto;">
+        <div style="position: relative;">
+          <select onchange="if(this.value) window.location.href=this.value;" style="width: 100%; padding: 0.8rem 1.2rem; border-radius: 50px; background: linear-gradient(135deg, #B68989, #9C5858); color: #ffffff; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; border: none; box-shadow: 0 4px 15px rgba(156,88,88,0.3); appearance: none; -webkit-appearance: none; cursor: pointer; text-align: center; outline: none;">
+            <option value="" disabled selected>✨ Choisir une rubrique...</option>
+            <option value="#ecole" style="background: #ffffff; color: #9C5858;">🏫 L'École</option>
+            <option value="#histoire" style="background: #ffffff; color: #9C5858;">📖 Notre Histoire</option>
+            <option value="#cours" style="background: #ffffff; color: #9C5858;">🩰 Découvrir nos cours</option>
+            <option value="#equipe" style="background: #ffffff; color: #9C5858;">👥 Notre Équipe</option>
+            <option value="#contact" style="background: #ffffff; color: #9C5858;">✉️ Contact</option>
+            <option value="portail.html" style="background: #ffffff; color: #9C5858;">🔐 Portail membres</option>
+          </select>
+          <div style="position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: #ffffff; font-size: 0.8rem;">▼</div>
+        </div>
       </div>
 
       <div class="hero-stats" style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; padding-top: 2.5rem; border-top: 1px solid rgba(0,0,0,0.1);">
         <div style="text-align: center;">
           <div id="stat-ans" style="font-family: var(--font-display); font-size: 2.5rem; color: #9C5858; font-weight: 700; line-height: 1;">0+</div>
           <div style="color: var(--white); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; font-weight: 600;">Ans d'expérience</div>
-        </div>
-        <div style="text-align: center;">
-          <div id="stat-eleves" style="font-family: var(--font-display); font-size: 2.5rem; color: #9C5858; font-weight: 700; line-height: 1;">0+</div>
-          <div style="color: var(--white); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; font-weight: 600;">Élèves</div>
         </div>
         <div style="text-align: center;">
           <div id="stat-styles" style="font-family: var(--font-display); font-size: 2.5rem; color: #9C5858; font-weight: 700; line-height: 1;">0+</div>
@@ -317,7 +315,7 @@
 
   <!-- Section Notre Histoire -->
   <section id="histoire" class="vitrine-section">
-    <h2 class="vitrine-title"><span style="color: #222;">Notre</span> <span style="color: #9C5858;">Histoire</span></h2>
+    <h2 class="vitrine-title"><span style="color: #ffffff;">Notre</span> <span style="color: #9C5858;">Histoire</span></h2>
     <p class="vitrine-subtitle">Une aventure humaine, familiale et artistique depuis près de 30 ans.</p>
     
     <div class="timeline">
@@ -391,8 +389,8 @@
   </section>
 
   <!-- Section Cours -->
-  <section id="cours" class="vitrine-section" style="background: var(--dark-2); border-radius: var(--radius);">
-    <h2 class="vitrine-title"><span style="color: #222;">Nos</span> <span style="color: #9C5858;">Cours</span></h2>
+  <section id="cours" class="vitrine-section">
+    <h2 class="vitrine-title"><span style="color: #ffffff;">Nos</span> <span style="color: #9C5858;">Cours</span></h2>
     <p class="vitrine-subtitle"><strong>40 cours dans 3 lieux — Studio ADK, Au Rox et Bertrix.</strong><br>De l'éveil pour les tout-petits aux compagnies de haut niveau, notre école propose un large éventail de styles afin de répondre à toutes les envies et à toutes les sensibilités.</p>
     
     <div class="grid-3" id="cours-grid">
@@ -400,9 +398,53 @@
     </div>
   </section>
 
+  <!-- Carrousel de Photos -->
+  <section class="vitrine-section" style="padding-top: 1rem; padding-bottom: 3.5rem;">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+      <h3 style="color: #ffffff; font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.2rem;">L'Ambiance <span style="color: #9C5858;">ADK</span></h3>
+      <p style="color: var(--text-light); font-size: 0.95rem;">Un aperçu de nos spectacles, cours et moments de partage.</p>
+    </div>
+    <div class="carousel-container" style="max-width: 900px; margin: 0 auto; position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 2px solid var(--gold);">
+      <div id="photo-carousel" style="display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); height: 400px;">
+        <div class="carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
+          <img src="assets/images/compagnie_stage.png" alt="Spectacles et compagnies" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2.5rem 1.5rem 1rem 1.5rem; color: #fff; text-align: center;">
+            <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.2rem; color: #E8D0C3;">Des spectacles époustouflants</h4>
+            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">Nos élèves et compagnies sur scène lors de nos événements.</p>
+          </div>
+        </div>
+        <div class="carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
+          <img src="assets/images/dance_contemporary.png" alt="Passion et expression" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2.5rem 1.5rem 1rem 1.5rem; color: #fff; text-align: center;">
+            <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.2rem; color: #E8D0C3;">Une ambiance dynamique et chaleureuse</h4>
+            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">L'expression artistique et le plaisir au cœur de chaque cours.</p>
+          </div>
+        </div>
+        <div class="carousel-slide" style="min-width: 100%; height: 100%; position: relative;">
+          <img src="assets/images/hiphop_dancer.png" alt="Énergie urbaine" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2.5rem 1.5rem 1rem 1.5rem; color: #fff; text-align: center;">
+            <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.2rem; color: #E8D0C3;">Énergie & Dépassement de soi</h4>
+            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">Des styles variés pour toutes les générations et toutes les envies.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Flèches de navigation -->
+      <button onclick="moveCarousel(-1)" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); background: rgba(234, 213, 213, 0.85); color: #9C5858; width: 42px; height: 42px; border-radius: 50%; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; z-index: 5;" onmouseover="this.style.background='#ffffff'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(234, 213, 213, 0.85)'; this.style.transform='translateY(-50%)'">&#10094;</button>
+      <button onclick="moveCarousel(1)" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: rgba(234, 213, 213, 0.85); color: #9C5858; width: 42px; height: 42px; border-radius: 50%; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; z-index: 5;" onmouseover="this.style.background='#ffffff'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(234, 213, 213, 0.85)'; this.style.transform='translateY(-50%)'">&#10095;</button>
+      
+      <!-- Indicateurs / Dots -->
+      <div id="carousel-dots" style="position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 10;">
+        <span class="carousel-dot active" onclick="goCarousel(0)" style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: 1; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></span>
+        <span class="carousel-dot" onclick="goCarousel(1)" style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: 0.5; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></span>
+        <span class="carousel-dot" onclick="goCarousel(2)" style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff; cursor: pointer; transition: 0.3s; opacity: 0.5; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></span>
+      </div>
+    </div>
+  </section>
+
   <!-- Section Équipe -->
   <section id="equipe" class="vitrine-section">
-    <h2 class="vitrine-title"><span style="color: #222;">L'Équipe</span> <span style="color: #9C5858;">ADK</span></h2>
+    <h2 class="vitrine-title"><span style="color: #ffffff;">L'Équipe</span> <span style="color: #9C5858;">ADK</span></h2>
     <p class="vitrine-subtitle">L'encadrement est assuré par des professeurs qualifiés, engagés et passionnés.</p>
     
     <div id="equipe-container">
@@ -411,8 +453,8 @@
   </section>
 
   <!-- Section Contact -->
-  <section id="contact" class="vitrine-section" style="background: var(--dark-2); border-radius: var(--radius);">
-    <h2 class="vitrine-title"><span style="color: #222;">Nous</span> <span style="color: #9C5858;">Contacter</span></h2>
+  <section id="contact" class="vitrine-section">
+    <h2 class="vitrine-title"><span style="color: #ffffff;">Nous</span> <span style="color: #9C5858;">Contacter</span></h2>
     <p class="vitrine-subtitle">Une question ? N'hésitez pas à nous écrire.</p>
     
     <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé !');">
@@ -437,7 +479,7 @@
   <div class="vitrine-modal" id="modal-dynamic">
     <div class="vitrine-modal-content" style="max-width: 850px;">
       <button class="vitrine-modal-close" onclick="closeModal('modal-dynamic')">×</button>
-      <h3 class="vitrine-title" id="modal-dynamic-title" style="margin-bottom: 0.2rem; color: #B68989;">Titre</h3>
+      <h3 class="vitrine-title" id="modal-dynamic-title" style="margin: 0 0 0.4rem 0; font-size: 1.6rem; text-align: left; color: #9C5858;">Titre</h3>
       <div id="modal-dynamic-content" style="color: var(--text-light); line-height: 1.5; white-space: pre-wrap;">
         <!-- Content injected here -->
       </div>
@@ -467,25 +509,47 @@
           if (typeof ALL_COURSES !== 'undefined') {
             const styleCourses = ALL_COURSES.filter(course => course.style === key);
             if (styleCourses.length > 0) {
-              subCoursesHtml = `<div style="margin-top: 0.5rem;">
-                <h4 style="color: var(--text-light); font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.5rem;">Liste des cours (${styleCourses.length})</h4>
-                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0.5rem;">
+              subCoursesHtml = `<div style="margin-top: 0.5rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 0.5rem;">
+                <h4 style="color: #9C5858; font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 0.5rem 0;">Liste des cours (${styleCourses.length})</h4>
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.6rem;">
               `;
               styleCourses.forEach(course => {
-                const lieuBadge = course.lieu !== 'adk' ? `<span style="font-size:0.7rem;color:var(--gold);margin-left:0.5rem;">📍 ${course.lieu.toUpperCase()}</span>` : '';
+                let lieuName = course.lieu;
+                if (course.lieu === 'adk') lieuName = 'Studio ADK';
+                else if (course.lieu === 'rox') lieuName = 'Au Rox';
+                else if (course.lieu === 'bertrix') lieuName = 'Bertrix';
+                else if (course.lieu === 'izel') lieuName = 'Izel';
+                else if (course.lieu === 'flore') lieuName = 'Florenville';
+                else lieuName = course.lieu ? course.lieu.toUpperCase() : 'Studio ADK';
+
+                const lieuBadge = `<span style="font-size:0.75rem;color:#ffffff;background:rgba(0,0,0,0.25);padding:0.1rem 0.5rem;border-radius:50px;font-weight:600;display:inline-flex;align-items:center;gap:3px;"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${lieuName}</span>`;
+
+                let profAvatarHtml = '';
+                const profName = course.prof ? course.prof.split(' · ')[0].trim() : '';
+                if (profName && typeof VITRINE_DATA !== 'undefined' && VITRINE_DATA.professeurs && VITRINE_DATA.professeurs[profName] && VITRINE_DATA.professeurs[profName].avatar) {
+                  profAvatarHtml = `<img src="${VITRINE_DATA.professeurs[profName].avatar}" alt="${profName}" style="width:18px;height:18px;border-radius:50%;object-fit:cover;display:inline-block;vertical-align:middle;margin-right:4px;border:1px solid #ffffff;">`;
+                } else {
+                  profAvatarHtml = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-right:4px;vertical-align:middle;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
+                }
+
                 subCoursesHtml += `
-                  <div class="course-card" style="box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid var(--border); height: 100%; background: #EAD5D5; border-radius: var(--radius-sm);">
-                    <div class="course-body" style="padding: 0.5rem;">
-                      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.4rem;">
-                        <span class="course-tag tag-${course.style}">${course.levels}</span>
-                        ${lieuBadge}
-                        ${course.biweekly ? '<span style="font-size:0.65rem;color:var(--text-muted);border:1px solid var(--glass-border);padding:0.1rem 0.5rem;border-radius:50px;">1 sem/2</span>' : ''}
+                  <div class="course-card" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2); height: 100%; background: #C68B8B; border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 75px; width: 100%; overflow: hidden; position: relative; background: #222;">
+                      <img src="${course.image || 'assets/images/hero_dancer.png'}" alt="${course.name}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+                      <div style="position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); padding: 2px 7px; border-radius: 50px; font-size: 0.65rem; color: #fff; font-weight: 600;">${course.levels}</div>
+                    </div>
+                    <div class="course-body" style="padding: 0.55rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; background: #C68B8B;">
+                      <div>
+                        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.3rem;">
+                          ${lieuBadge}
+                          ${course.biweekly ? '<span style="font-size:0.65rem;color:#ffffff;background:rgba(0,0,0,0.25);padding:0.1rem 0.5rem;border-radius:50px;font-weight:600;">1 sem/2</span>' : ''}
+                        </div>
+                        <h3 class="course-name" style="font-size: 0.92rem; margin: 0.2rem 0 0.35rem 0; color: #ffffff; font-family: var(--font-display); font-weight: 700; line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">${course.name}</h3>
                       </div>
-                      <h3 class="course-name" style="font-size: 0.9rem; margin-bottom: 0.2rem; color: var(--text-light);">${course.name}</h3>
-                      <div class="course-meta" style="margin-top: 0.2rem; font-size: 0.75rem;">
-                        <span class="course-meta-item" style="color: var(--text-light);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>${course.schedule}</span>
-                        <span class="course-meta-item" style="color: var(--text-light);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>${course.ages}</span>
-                        <span class="course-meta-item" style="color:var(--text-light)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>${course.prof}</span>
+                      <div class="course-meta" style="margin-top: 0.35rem; font-size: 0.75rem; display: flex; flex-direction: column; gap: 0.25rem; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 0.35rem;">
+                        <span class="course-meta-item" style="color: #ffffff; font-weight: 600; display: flex; align-items: center;"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-right:5px;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>${course.schedule}</span></span>
+                        <span class="course-meta-item" style="color: #ffffff; font-weight: 600; display: flex; align-items: center;"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-right:5px;flex-shrink:0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>${course.ages}</span></span>
+                        <span class="course-meta-item" style="color: #ffffff; font-weight: 600; display: flex; align-items: center;">${profAvatarHtml}<span>${course.prof}</span></span>
                       </div>
                     </div>
                   </div>
@@ -496,12 +560,12 @@
           }
 
           document.getElementById('modal-dynamic-content').innerHTML = `
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-start;">
                <div style="flex: 1; min-width: 250px;">
-                  <p style="font-size: 0.85rem; line-height: 1.4; margin: 0;">${data.content}</p>
+                  <p style="font-size: 0.9rem; line-height: 1.45; margin: 0; color: var(--text-light);">${data.content}</p>
                </div>
                <div style="flex: 1; min-width: 250px;">
-                  <img src="${data.modalImage}" alt="${data.title}" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: var(--radius-sm);">
+                  <img src="${data.modalImage}" alt="${data.title}" style="width: 100%; max-height: 150px; object-fit: cover; border-radius: var(--radius-sm); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                </div>
             </div>
             ${subCoursesHtml}
@@ -521,12 +585,39 @@
       }
     }
 
+    let currentSlide = 0;
+    const totalSlides = 3;
+    let carouselTimer = setInterval(() => moveCarousel(1), 4500);
+
+    function moveCarousel(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      updateCarousel();
+      resetCarouselTimer();
+    }
+    function goCarousel(index) {
+      currentSlide = index;
+      updateCarousel();
+      resetCarouselTimer();
+    }
+    function updateCarousel() {
+      const track = document.getElementById('photo-carousel');
+      if (track) {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        const dots = document.querySelectorAll('#carousel-dots .carousel-dot');
+        dots.forEach((dot, idx) => {
+          dot.style.opacity = idx === currentSlide ? '1' : '0.5';
+        });
+      }
+    }
+    function resetCarouselTimer() {
+      clearInterval(carouselTimer);
+      carouselTimer = setInterval(() => moveCarousel(1), 4500);
+    }
+
     function toggleTimeline(element) {
       const body = element.querySelector('.timeline-body');
       const icon = element.querySelector('.timeline-icon');
       
-      // Close all other open timelines if we want accordion behavior, 
-      // but letting multiple open is fine too. Let's let them open independently.
       
       if (body.style.maxHeight && body.style.maxHeight !== '0px') {
         body.style.maxHeight = '0px';
@@ -569,7 +660,6 @@
       initParticles();
       setTimeout(() => {
         animateCounter('stat-ans', 28);
-        animateCounter('stat-eleves', 180);
         animateCounter('stat-styles', 8);
         animateCounter('stat-profs', 14);
       }, 300);

@@ -65,12 +65,14 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   transition: var(--transition);
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(202, 169, 169, 0.2);
 }
 .navbar.scrolled {
-  background: rgba(234, 213, 213, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 30px rgba(202, 169, 169, 0.15);
+  box-shadow: 0 4px 30px rgba(202, 169, 169, 0.25);
 }
 .nav-logo {
   display: flex;
@@ -81,14 +83,14 @@ ul { list-style: none; }
   font-family: var(--font-display);
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--gold);
+  color: #9C5858;
   letter-spacing: 0.05em;
 }
 .nav-logo-sub {
   font-size: 0.65rem;
   font-weight: 300;
   letter-spacing: 0.3em;
-  color: var(--text-muted);
+  color: #B68989;
   text-transform: uppercase;
 }
 .nav-links {
@@ -101,7 +103,7 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #6A5C5C;
   transition: var(--transition);
   position: relative;
   padding: 0.25rem 0;
@@ -111,10 +113,10 @@ ul { list-style: none; }
   position: absolute;
   bottom: -2px; left: 0;
   width: 0; height: 1px;
-  background: var(--gold);
+  background: #9C5858;
   transition: var(--transition);
 }
-.nav-link:hover, .nav-link.active { color: var(--gold); }
+.nav-link:hover, .nav-link.active { color: #9C5858; }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 .nav-cta {
   padding: 0.6rem 1.4rem;
@@ -143,7 +145,7 @@ ul { list-style: none; }
 .nav-burger span {
   width: 24px;
   height: 2px;
-  background: var(--gold);
+  background: #9C5858;
   border-radius: 2px;
   transition: var(--transition);
   display: block;
@@ -152,7 +154,7 @@ ul { list-style: none; }
   display: none;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(234, 213, 213, 0.98);
+  background: #ffffff;
   backdrop-filter: blur(20px);
   z-index: 999;
   flex-direction: column;
@@ -164,12 +166,26 @@ ul { list-style: none; }
 .mobile-menu .nav-link {
   font-size: 1.5rem;
   letter-spacing: 0.2em;
-  color: var(--white);
+  color: #9C5858;
 }
 
 /* =============================================
    SECTIONS
    ============================================= */
+.vitrine-section {
+  padding: 3.5rem 2rem;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  background: var(--dark-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+@media (max-width: 768px) {
+  .vitrine-section {
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+  }
+}
 .section {
   padding: 7rem 2rem;
   max-width: 1200px;
