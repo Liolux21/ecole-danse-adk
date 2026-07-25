@@ -75,7 +75,7 @@ const VITRINE_DATA = {
       "title": "Daisy",
       "styles": "Éveil & Initiation (3-5 ans)",
       "avatar": "https://annedkdanse.be/gallery_gen/bcab6ca05caeee3c4005be65786f33f6_500x498_fit.jpg?ts=1784747270",
-      "modalImage": "https://annedkdanse.be/gallery_gen/bcab6ca05caeee3c4005be65786f33f6_500x498_fit.jpg?ts=1784747270",
+      "modalImage": "https://www.annedkdanse.be/gallery_gen/a3452dc8191dd14761a3f034835c4c58_fit.png?ts=1784985733",
       "content": "Enseignante spécialisée en Éveil & Initiation pour les enfants de 3 à 5 ans. Passionnée par le jeune âge, Daisy guide les tout-petits dans leurs premiers pas dansés en développant leur motricité, leur coordination, leur écoute musicale et leur expression corporelle à travers une pédagogie ludique, douce et bienveillante au Studio ADK."
     },
     "Maurine": {
